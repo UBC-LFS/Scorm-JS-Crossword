@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  lang="en"
+  xml:lang="en"
+  prefix="dc: http://purl.org/dc/elements/1.1/"
+>
+  <head>
+    <meta
+      name="author"
+      content="Created with Hot Potatoes by Half-Baked Software, registered to Gabriel."
+    />
+    <meta
+      name="keywords"
+      content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="dc:creator" content="Gabriel" />
+    <meta name="dc:title" content="APBI 318 Crossword" />
+
+    <title>APBI 318 Crossword</title>
+
+    <!-- Made with executable version 7.0 Release 3 Build 0 -->
+
+    <!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+    <script type="text/javascript" src="crossword.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+
+  <body onload="StartUp()" id="TheBody" onunload="CheckLMSFinish()">
+    <!-- BeginTopNavButtons -->
+
+    <!-- EndTopNavButtons -->
+
+    <div class="Titles">
+      <h2 class="ExerciseTitle">APBI 318 Crossword</h2>
+
+      <h3 class="ExerciseSubtitle">Bonus Crossword</h3>
+    </div>
+
+    <div id="InstructionsDiv" class="StdDiv">
+      <div id="Instructions">
+        You have the opportunity to earn bonus points toward the final grade. If
+        you choose to try, complete the following crossword puzzle. Each clue is
+        worth 1/104th of 5% final grade. However, if you return a completed
+        correct puzzle, it&#x2019;s worth 5% toward your final course grade!!<br /><br />Click
+        on the numbers, type your answers and press Enter to complete the
+        crossword below, then click Done to submit.
+      </div>
+    </div>
+
+    <div id="ContainerDiv">
+      <div class="ExerciseContainer">
+        <div id="ClueEntry"></div>
+
+        <!-- This top button is hidden; uncomment it to reveal it. -->
+        <!--
+<button id="CheckButton1" class="FuncButton" onclick="CheckAnswers()">&#160;Check&#160;</button>
+
+ -->
+
+        <table class="CrosswordGrid">
+          <tbody>
+            <tr id="Row_0">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(1,0,20)"
+                  >1</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_0_20"
+                  onclick="ShowClue(1,0,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_1">
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(2,1,0)"
+                  >2</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_1_0"
+                  onclick="ShowClue(2,1,0)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_1_1">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(3,1,2)"
+                  >3</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_1_2"
+                  onclick="ShowClue(3,1,2)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_1_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_5">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(4,1,6)"
+                  >4</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_1_6"
+                  onclick="ShowClue(4,1,6)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(5,1,8)"
+                  >5</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_1_8"
+                  onclick="ShowClue(5,1,8)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(6,1,9)"
+                  >6</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_1_9"
+                  onclick="ShowClue(6,1,9)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_1_10">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_13">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(7,1,14)"
+                  >7</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_1_14"
+                  onclick="ShowClue(7,1,14)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_1_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_16">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(8,1,20)"
+                  >8</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_1_20"
+                  onclick="ShowClue(8,1,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_1_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_23">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_24">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_1_25">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_2">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_2_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_2_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_2_9">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_2_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_2_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_3">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_3_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(9,3,4)"
+                  >9</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_3_4"
+                  onclick="ShowClue(9,3,4)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_3_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_6">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_7">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_8">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_9">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_10">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_11">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(10,3,12)"
+                  >10</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_3_12"
+                  onclick="ShowClue(10,3,12)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_3_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(11,3,17)"
+                  >11</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_3_17"
+                  onclick="ShowClue(11,3,17)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_3_18">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_19">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_20">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_3_22">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(12,3,23)"
+                  >12</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_3_23"
+                  onclick="ShowClue(12,3,23)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_3_24">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_4">
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(13,4,0)"
+                  >13</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_4_0"
+                  onclick="ShowClue(13,4,0)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_4_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_4_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_4_9">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_4_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_4_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_4_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_4_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_5">
+              <td class="LetterOnlyCell"><span id="L_5_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(14,5,3)"
+                  >14</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_5_3"
+                  onclick="ShowClue(14,5,3)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_5_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_6">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_7">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_5_9">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(15,5,11)"
+                  >15</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_5_11"
+                  onclick="ShowClue(15,5,11)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_5_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_13">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_14">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_16">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(16,5,19)"
+                  >16</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_5_19"
+                  onclick="ShowClue(16,5,19)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_5_20">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_21">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(17,5,23)"
+                  >17</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_5_23"
+                  onclick="ShowClue(17,5,23)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_5_24">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_5_25">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_6">
+              <td class="LetterOnlyCell"><span id="L_6_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_6_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(18,6,8)"
+                  >18</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_6_8"
+                  onclick="ShowClue(18,6,8)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_6_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_6_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_6_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_6_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(19,6,26)"
+                  >19</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_6_26"
+                  onclick="ShowClue(19,6,26)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+            </tr>
+            <tr id="Row_7">
+              <td class="LetterOnlyCell"><span id="L_7_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_7_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(20,7,6)"
+                  >20</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_7_6"
+                  onclick="ShowClue(20,7,6)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_7_7">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_8">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_9">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_10">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_13">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(21,7,14)"
+                  >21</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_7_14"
+                  onclick="ShowClue(21,7,14)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_7_15">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(22,7,17)"
+                  >22</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_7_17"
+                  onclick="ShowClue(22,7,17)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_7_18">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_19">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_20">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_23">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_24">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_25">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_7_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_8">
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(23,8,0)"
+                  >23</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_8_0"
+                  onclick="ShowClue(23,8,0)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_8_1">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(24,8,2)"
+                  >24</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_8_2"
+                  onclick="ShowClue(24,8,2)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_8">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_8_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_9">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_9_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_9_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_9_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_9_8">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(25,9,10)"
+                  >25</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_9_10"
+                  onclick="ShowClue(25,9,10)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_9_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_9_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_9_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_9_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(26,9,19)"
+                  >26</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_9_19"
+                  onclick="ShowClue(26,9,19)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_9_20">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_9_21">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_9_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_9_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_10">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_10_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_10_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(27,10,6)"
+                  >27</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_10_6"
+                  onclick="ShowClue(27,10,6)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_10_7">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_10_8">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_10_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(28,10,16)"
+                  >28</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_10_16"
+                  onclick="ShowClue(28,10,16)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_10_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(29,10,22)"
+                  >29</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_10_22"
+                  onclick="ShowClue(29,10,22)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_10_23">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(30,10,24)"
+                  >30</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_10_24"
+                  onclick="ShowClue(30,10,24)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_10_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_11">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_11_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_11_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_11_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_11_8">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(31,11,10)"
+                  >31</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_11_10"
+                  onclick="ShowClue(31,11,10)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(32,11,13)"
+                  >32</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_11_13"
+                  onclick="ShowClue(32,11,13)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_11_14">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_11_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_11_16">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_11_17">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_11_18">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_11_19">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(33,11,21)"
+                  >33</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_11_21"
+                  onclick="ShowClue(33,11,21)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_11_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_11_23">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_11_24">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_11_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_12">
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(34,12,0)"
+                  >34</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_12_0"
+                  onclick="ShowClue(34,12,0)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_12_1">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_12_2">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_12_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_12_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_12_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_12_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_12_8">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_12_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_12_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_12_16">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_12_22">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_12_24">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_12_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_13">
+              <td class="LetterOnlyCell"><span id="L_13_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_13_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_13_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(35,13,10)"
+                  >35</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_13_10"
+                  onclick="ShowClue(35,13,10)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_13_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_13_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_13_13">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_13_14">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_13_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_13_16">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(36,13,17)"
+                  >36</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_13_17"
+                  onclick="ShowClue(36,13,17)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_13_18">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_13_19">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(37,13,20)"
+                  >37</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_13_20"
+                  onclick="ShowClue(37,13,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_13_22">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_13_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_14">
+              <td class="LetterOnlyCell"><span id="L_14_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(38,14,2)"
+                  >38</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_14_2"
+                  onclick="ShowClue(38,14,2)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_14_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_14_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_14_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_14_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_14_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(39,14,16)"
+                  >39</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_14_16"
+                  onclick="ShowClue(39,14,16)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_14_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(40,14,20)"
+                  >40</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_14_20"
+                  onclick="ShowClue(40,14,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_14_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_14_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_14_23">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_14_24">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_14_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_15">
+              <td class="LetterOnlyCell"><span id="L_15_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(41,15,6)"
+                  >41</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_15_6"
+                  onclick="ShowClue(41,15,6)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_15_7">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_15_8">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_15_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(42,15,14)"
+                  >42</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_15_14"
+                  onclick="ShowClue(42,15,14)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_15_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_15_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_15_22">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_15_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_16">
+              <td class="LetterOnlyCell"><span id="L_16_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(43,16,3)"
+                  >43</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_16_3"
+                  onclick="ShowClue(43,16,3)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_16_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_16_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_16_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(44,16,9)"
+                  >44</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_16_9"
+                  onclick="ShowClue(44,16,9)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_16_10">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_16_11">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(45,16,12)"
+                  >45</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_16_12"
+                  onclick="ShowClue(45,16,12)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_16_13">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_16_14">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_16_15">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_16_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_16_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(46,16,23)"
+                  >46</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_16_23"
+                  onclick="ShowClue(46,16,23)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_16_24">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_16_25">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_16_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_17">
+              <td class="LetterOnlyCell"><span id="L_17_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_17_3">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_17_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_17_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_17_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_17_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(47,17,16)"
+                  >47</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_17_16"
+                  onclick="ShowClue(47,17,16)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_17_17">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_17_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(48,17,20)"
+                  >48</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_17_20"
+                  onclick="ShowClue(48,17,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_17_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_17_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_17_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_17_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_18">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_18_3">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_18_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_18_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_18_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_18_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_18_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_18_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_18_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_19">
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(49,19,1)"
+                  >49</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_19_1"
+                  onclick="ShowClue(49,19,1)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_19_2">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_6">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_7">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(50,19,10)"
+                  >50</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_19_10"
+                  onclick="ShowClue(50,19,10)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_19_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_13">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_14">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_19_16">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_19_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_19_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(51,19,26)"
+                  >51</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_19_26"
+                  onclick="ShowClue(51,19,26)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+            </tr>
+            <tr id="Row_20">
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_1">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_3">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(52,20,18)"
+                  >52</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_20_18"
+                  onclick="ShowClue(52,20,18)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_20_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_21">
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_21_1">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_21_3">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(53,21,7)"
+                  >53</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_21_7"
+                  onclick="ShowClue(53,21,7)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_21_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_21_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(54,21,14)"
+                  >54</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_21_14"
+                  onclick="ShowClue(54,21,14)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_21_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_21_16">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_21_17">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_21_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(55,21,20)"
+                  >55</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_21_20"
+                  onclick="ShowClue(55,21,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_21_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_21_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_21_23">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_21_24">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_21_25">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_21_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_22">
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_22_1">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(56,22,4)"
+                  >56</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_22_4"
+                  onclick="ShowClue(56,22,4)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_22_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_22_6">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_22_7">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_22_8">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_22_9">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_22_10">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_22_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_22_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_22_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_22_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_22_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_22_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_23">
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(57,23,0)"
+                  >57</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_23_0"
+                  onclick="ShowClue(57,23,0)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_23_1">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_23_2">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_23_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_23_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_23_7">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_23_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_23_12">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_23_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(58,23,17)"
+                  >58</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_23_17"
+                  onclick="ShowClue(58,23,17)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_23_18">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_23_19">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_23_20">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(59,23,21)"
+                  >59</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_23_21"
+                  onclick="ShowClue(59,23,21)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_23_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_23_23">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(60,23,24)"
+                  >60</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_23_24"
+                  onclick="ShowClue(60,23,24)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_23_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_24">
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_24_1">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(61,24,4)"
+                  >61</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_24_4"
+                  onclick="ShowClue(61,24,4)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_24_5">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(62,24,6)"
+                  >62</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_24_6"
+                  onclick="ShowClue(62,24,6)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_24_7">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_24_8">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(63,24,13)"
+                  >63</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_24_13"
+                  onclick="ShowClue(63,24,13)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(64,24,16)"
+                  >64</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_24_16"
+                  onclick="ShowClue(64,24,16)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_24_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_24_21">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(65,24,23)"
+                  >65</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_24_23"
+                  onclick="ShowClue(65,24,23)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_24_24">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_24_25">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_24_26">&#160;</span></td>
+            </tr>
+            <tr id="Row_25">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(66,25,2)"
+                  >66</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_25_2"
+                  onclick="ShowClue(66,25,2)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_25_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_25_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(67,25,9)"
+                  >67</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_25_9"
+                  onclick="ShowClue(67,25,9)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(68,25,11)"
+                  >68</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_25_11"
+                  onclick="ShowClue(68,25,11)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_25_13">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_25_16">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_25_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(69,25,21)"
+                  >69</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_25_21"
+                  onclick="ShowClue(69,25,21)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_25_22">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_25_24">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_26">
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(70,26,1)"
+                  >70</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_26_1"
+                  onclick="ShowClue(70,26,1)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_26_2">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_6">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_7">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_8">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_9">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_10">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_26_13">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(71,26,15)"
+                  >71</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_26_15"
+                  onclick="ShowClue(71,26,15)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_26_16">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(72,26,17)"
+                  >72</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_26_17"
+                  onclick="ShowClue(72,26,17)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_26_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(73,26,20)"
+                  >73</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_26_20"
+                  onclick="ShowClue(73,26,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(74,26,23)"
+                  >74</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_26_23"
+                  onclick="ShowClue(74,26,23)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_27">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_27_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_27_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_27_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_27_9">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_27_11">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_27_13">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_27_15">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_27_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(75,27,20)"
+                  >75</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_27_20"
+                  onclick="ShowClue(75,27,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_27_21">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(76,27,23)"
+                  >76</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_27_23"
+                  onclick="ShowClue(76,27,23)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_27_24">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(77,27,25)"
+                  >77</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_27_25"
+                  onclick="ShowClue(77,27,25)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_28">
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(78,28,0)"
+                  >78</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_28_0"
+                  onclick="ShowClue(78,28,0)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_28_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_28_4">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_28_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_28_9">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_28_15">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_28_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_28_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_28_25">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_29">
+              <td class="LetterOnlyCell"><span id="L_29_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_29_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_29_6">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(79,29,9)"
+                  >79</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_29_9"
+                  onclick="ShowClue(79,29,9)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_29_10">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_13">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_14">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_16">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_17">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(80,29,18)"
+                  >80</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_29_18"
+                  onclick="ShowClue(80,29,18)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_29_19">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_20">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_29_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_29_25">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_30">
+              <td class="LetterOnlyCell"><span id="L_30_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_30_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(81,30,5)"
+                  >81</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_30_5"
+                  onclick="ShowClue(81,30,5)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_30_6">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(82,30,7)"
+                  >82</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_30_7"
+                  onclick="ShowClue(82,30,7)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_30_8">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_30_9">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_30_15">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_30_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_30_23">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_30_25">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_31">
+              <td class="LetterOnlyCell"><span id="L_31_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(83,31,2)"
+                  >83</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_31_2"
+                  onclick="ShowClue(83,31,2)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_31_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_6">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_7">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(84,31,9)"
+                  >84</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_31_9"
+                  onclick="ShowClue(84,31,9)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_31_10">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_11">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_13">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_14">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(85,31,16)"
+                  >85</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_31_16"
+                  onclick="ShowClue(85,31,16)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_31_17">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_18">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_19">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_31_20">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(86,31,22)"
+                  >86</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_31_22"
+                  onclick="ShowClue(86,31,22)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_31_25">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_32">
+              <td class="LetterOnlyCell"><span id="L_32_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_32_2">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_32_5">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_32_7">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_32_16">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_32_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(87,32,22)"
+                  >87</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_32_22"
+                  onclick="ShowClue(87,32,22)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_32_23">&#160;</span></td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(88,32,24)"
+                  >88</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_32_24"
+                  onclick="ShowClue(88,32,24)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_32_25">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_33">
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(89,33,0)"
+                  >89</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_33_0"
+                  onclick="ShowClue(89,33,0)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_33_1">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_2">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_5">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_33_7">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(90,33,11)"
+                  >90</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_33_11"
+                  onclick="ShowClue(90,33,11)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_33_12">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_13">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_14">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_16">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_17">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_18">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_19">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_20">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_33_22">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_33_24">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_34">
+              <td class="LetterOnlyCell"><span id="L_34_0">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_34_7">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_34_16">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_34_18">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_34_22">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="LetterOnlyCell"><span id="L_34_24">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+            <tr id="Row_35">
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(91,35,2)"
+                  >91</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_35_2"
+                  onclick="ShowClue(91,35,2)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_35_3">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_4">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_5">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_6">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_7">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_8">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_9">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_10">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(92,35,13)"
+                  >92</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_35_13"
+                  onclick="ShowClue(92,35,13)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_35_14">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_15">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_16">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_17">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+              <td class="BlankCell">&#160;</td>
+              <td class="NumLetterCell">
+                <a
+                  href="javascript:void(0);"
+                  class="GridNum"
+                  onclick="ShowClue(93,35,20)"
+                  >93</a
+                ><span
+                  class="NumLetterCellText"
+                  id="L_35_20"
+                  onclick="ShowClue(93,35,20)"
+                  >&#160;&#160;&#160;</span
+                >
+              </td>
+              <td class="LetterOnlyCell"><span id="L_35_21">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_22">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_23">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_24">&#160;</span></td>
+              <td class="LetterOnlyCell"><span id="L_35_25">&#160;</span></td>
+              <td class="BlankCell">&#160;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="CheckButton2" class="FuncButton" onclick="CheckAnswers()">
+          &#160;Check&#160;
+        </button>
+
+        <table id="Clues">
+          <tbody>
+            <tr>
+              <td>
+                <table class="ClueList">
+                  <tbody id="CluesAcross">
+                    <tr>
+                      <td colspan="2">
+                        <h3 class="ExerciseSubtitle" id="CluesAcrossLabel">
+                          Across:
+                        </h3>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="ClueNum">2.</td>
+                      <td id="Clue_A_2" class="Clue">
+                        Mendelian inheritance pattern; pertaining to diploids
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">5.</td>
+                      <td id="Clue_A_5" class="Clue">
+                        Result from a cross between two inbred parents
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">8.</td>
+                      <td id="Clue_A_8" class="Clue">Portion of an anther</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">9.</td>
+                      <td id="Clue_A_9" class="Clue">9:6:1</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">11.</td>
+                      <td id="Clue_A_11" class="Clue">
+                        Averaged squared deviation from a mean
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">14.</td>
+                      <td id="Clue_A_14" class="Clue">
+                        A mutant; hockey for example
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">15.</td>
+                      <td id="Clue_A_15" class="Clue">
+                        From single strands to double-strands nucleic
+                        acid-active form
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">16.</td>
+                      <td id="Clue_A_16" class="Clue">Energy biochemical</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">17.</td>
+                      <td id="Clue_A_17" class="Clue">
+                        Number of effective factors when P1=18, P2=6 and F2
+                        genetic variance = 18
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">20.</td>
+                      <td id="Clue_A_20" class="Clue">
+                        Ability of a genotype to be expressed phenotypically
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">22.</td>
+                      <td id="Clue_A_22" class="Clue">
+                        Carrier of nuclear DNA
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">23.</td>
+                      <td id="Clue_A_23" class="Clue">
+                        To locate genes on 22 across
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">25.</td>
+                      <td id="Clue_A_25" class="Clue">
+                        Specialized floret of a composite; a piece of the sun
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">26.</td>
+                      <td id="Clue_A_26" class="Clue">
+                        Type of inbreeding cross less intense than self
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">27.</td>
+                      <td id="Clue_A_27" class="Clue">
+                        Name of journal that was once called 'Der
+                        Zuchter'-initials
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">29.</td>
+                      <td id="Clue_A_29" class="Clue">
+                        Chemical used in somatic hybridization; mumbly _____
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">32.</td>
+                      <td id="Clue_A_32" class="Clue">PMAT twice</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">33.</td>
+                      <td id="Clue_A_33" class="Clue">
+                        Another name for the pollen parent
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">34.</td>
+                      <td id="Clue_A_34" class="Clue">
+                        A dye used in a cytological stain
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">35.</td>
+                      <td id="Clue_A_35" class="Clue">
+                        A biochemical used in seed and pollen viability tests
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">38.</td>
+                      <td id="Clue_A_38" class="Clue">
+                        Starch is formed and stored in _____ plasts
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">39.</td>
+                      <td id="Clue_A_39" class="Clue">
+                        Danish for the largest phenotypic group in AaBb selfed
+                        with dominance
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">40.</td>
+                      <td id="Clue_A_40" class="Clue">
+                        Sporophytic incompatibility reaction site
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">41.</td>
+                      <td id="Clue_A_41" class="Clue">Coupling; not trans</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">43.</td>
+                      <td id="Clue_A_43" class="Clue">
+                        Chemical involved in both transcription and translation
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">44.</td>
+                      <td id="Clue_A_44" class="Clue">
+                        Must occur 100% of the time to assure independent
+                        assortment of 2 loci
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">46.</td>
+                      <td id="Clue_A_46" class="Clue">
+                        Selection pressure for beach plants; abiotic stressor
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">47.</td>
+                      <td id="Clue_A_47" class="Clue">
+                        The essence of plant breeding; 'the birds and the bees'
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">48.</td>
+                      <td id="Clue_A_48" class="Clue">Mutation agent</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">49.</td>
+                      <td id="Clue_A_49" class="Clue">Gene insertion vector</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">50.</td>
+                      <td id="Clue_A_50" class="Clue">
+                        What you, corn, and Mendal's peas have in common; you
+                        are each a _____
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">54.</td>
+                      <td id="Clue_A_54" class="Clue">
+                        What a lettuce breeder wants their lettuce to be
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">55.</td>
+                      <td id="Clue_A_55" class="Clue">
+                        In 19 down, there are 2 different _____
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">56.</td>
+                      <td id="Clue_A_56" class="Clue">Cc x cc</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">57.</td>
+                      <td id="Clue_A_57" class="Clue">
+                        Botanical term for a mature seed coat
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">58.</td>
+                      <td id="Clue_A_58" class="Clue">
+                        Time of pollen shedding
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">61.</td>
+                      <td id="Clue_A_61" class="Clue">
+                        Stage of meiosis where crossing over takes place. _____
+                        tene
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">65.</td>
+                      <td id="Clue_A_65" class="Clue">
+                        Anatomical building block of a living organism
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">69.</td>
+                      <td id="Clue_A_69" class="Clue">
+                        Growth regulator associated with tissue elongation
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">70.</td>
+                      <td id="Clue_A_70" class="Clue">
+                        A common term used in APBI 318; 13 down plus 59 down
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">71.</td>
+                      <td id="Clue_A_71" class="Clue">
+                        One half of a bi-nucleate pollen grain; AKA vegetative
+                        nucleus
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">75.</td>
+                      <td id="Clue_A_75" class="Clue">
+                        Male promiscuity by the wind (abbreviation)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">76.</td>
+                      <td id="Clue_A_76" class="Clue">
+                        Important histogen for plant breeding
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">79.</td>
+                      <td id="Clue_A_79" class="Clue">
+                        Movement of chiasmata to chromosome ends
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">81.</td>
+                      <td id="Clue_A_81" class="Clue">
+                        Common name for the genus Acer
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">83.</td>
+                      <td id="Clue_A_83" class="Clue">
+                        Statistical term used to denote reproducibility (with
+                        standard); what you hope not to make on this exam
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">84.</td>
+                      <td id="Clue_A_84" class="Clue">
+                        To choose the plants that you desire; _____ion pressure
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">85.</td>
+                      <td id="Clue_A_85" class="Clue">To discard; a bad guy</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">87.</td>
+                      <td id="Clue_A_87" class="Clue">
+                        A sequence of nucleotides that code for a functional
+                        product or regulatory activity
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">89.</td>
+                      <td id="Clue_A_89" class="Clue">
+                        1st person to develop formula to calculate number of
+                        effective factors for a metrical trait
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">90.</td>
+                      <td id="Clue_A_90" class="Clue">S1S2 x S1S2</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">91.</td>
+                      <td id="Clue_A_91" class="Clue">Aa &gt; AA or aa</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">92.</td>
+                      <td id="Clue_A_92" class="Clue">
+                        Site of incompatibility reaction in binucleate pollen;
+                        with 77 down
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">93.</td>
+                      <td id="Clue_A_93" class="Clue">
+                        'O give me a home, where the pollen grains roam'
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+
+              <td>
+                <table class="ClueList">
+                  <tbody id="CluesDown">
+                    <tr>
+                      <td colspan="2">
+                        <h3 class="ExerciseSubtitle" id="CluesDownLabel">
+                          Down:
+                        </h3>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="ClueNum">1.</td>
+                      <td id="Clue_D_1" class="Clue">
+                        Two traits conditioned by the same locus
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">3.</td>
+                      <td id="Clue_D_3" class="Clue">
+                        Final product of sexual reproduction
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">4.</td>
+                      <td id="Clue_D_4" class="Clue">
+                        First word of an important statistic used in genetic
+                        analysis
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">6.</td>
+                      <td id="Clue_D_6" class="Clue">The unripened fruit</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">7.</td>
+                      <td id="Clue_D_7" class="Clue">
+                        A pollinator; spelling _____
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">9.</td>
+                      <td id="Clue_D_9" class="Clue">
+                        The degree to which a particular genotype is exhibited
+                        phenotypically
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">10.</td>
+                      <td id="Clue_D_10" class="Clue">Fusion of gametes</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">11.</td>
+                      <td id="Clue_D_11" class="Clue">
+                        Abundant at pollen tube tip
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">12.</td>
+                      <td id="Clue_D_12" class="Clue">
+                        Genetic result of 44 across
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">13.</td>
+                      <td id="Clue_D_13" class="Clue">
+                        A cell within a cell; mate for 59 down
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">18.</td>
+                      <td id="Clue_D_18" class="Clue">
+                        One part of the Ouchterlony Diffusion Test
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">19.</td>
+                      <td id="Clue_D_19" class="Clue">Aa, Bb, or Cc</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">20.</td>
+                      <td id="Clue_D_20" class="Clue">
+                        Bananas, seedless grapes, some oranges
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">21.</td>
+                      <td id="Clue_D_21" class="Clue">
+                        A plant made up of 2 or more genetically or
+                        cytologically distinct tissues
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">24.</td>
+                      <td id="Clue_D_24" class="Clue">
+                        Nuclei that form 2/3 of the endosperm
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">28.</td>
+                      <td id="Clue_D_28" class="Clue">
+                        Sequence of 3 nucleotides that determine 42 down
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">29.</td>
+                      <td id="Clue_D_29" class="Clue">
+                        Stigma, style and ovary; word most often spelled wrong
+                        on exams
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">30.</td>
+                      <td id="Clue_D_30" class="Clue">
+                        A type of electrophoresis
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">31.</td>
+                      <td id="Clue_D_31" class="Clue">
+                        Organelle that has its own DNA
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">34.</td>
+                      <td id="Clue_D_34" class="Clue">
+                        Fusion product that includes only nucleus of one parent
+                        in cytoplasm of another
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">36.</td>
+                      <td id="Clue_D_36" class="Clue">
+                        Loci less than 50 genetic map units apart
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">37.</td>
+                      <td id="Clue_D_37" class="Clue">
+                        Influence of pollen on maternal tissues of the fruit;
+                        indirect effects
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">42.</td>
+                      <td id="Clue_D_42" class="Clue">
+                        Essential biochemicals of life; see 28 down
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">43.</td>
+                      <td id="Clue_D_43" class="Clue">
+                        What sometimes happens to loci when treated with 48
+                        across
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">45.</td>
+                      <td id="Clue_D_45" class="Clue">
+                        Separation of chromosomes in cell division occurs during
+                        _____
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">46.</td>
+                      <td id="Clue_D_46" class="Clue">
+                        A type of hybrid cultivar that is heterogeneous
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">49.</td>
+                      <td id="Clue_D_49" class="Clue">
+                        What 7 down hopefully disseminates in field for F1
+                        production
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">51.</td>
+                      <td id="Clue_D_51" class="Clue">
+                        Specialized organ of pollen production in maize
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">52.</td>
+                      <td id="Clue_D_52" class="Clue">
+                        Apparatus that pulls or directs chromosomes to poles in
+                        cell division
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">53.</td>
+                      <td id="Clue_D_53" class="Clue">
+                        Chemical used in pollination procedures, laboratory
+                        analysis; favorite of inebriates
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">56.</td>
+                      <td id="Clue_D_56" class="Clue">
+                        Tissue that is important in microspore production
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">59.</td>
+                      <td id="Clue_D_59" class="Clue">
+                        Hard boiled or over easy; see 70 across
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">60.</td>
+                      <td id="Clue_D_60" class="Clue">
+                        Initials of instrument used to look at very small things
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">62.</td>
+                      <td id="Clue_D_62" class="Clue">
+                        A domesticated plant type; bred in captivity
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">63.</td>
+                      <td id="Clue_D_63" class="Clue">
+                        Product formed when 43 across is treated with reverse
+                        transcriptase
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">64.</td>
+                      <td id="Clue_D_64" class="Clue">
+                        Initials for a unit used to determine distance between
+                        loci
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">66.</td>
+                      <td id="Clue_D_66" class="Clue">
+                        Roots of a plant, plural form; lineage
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">67.</td>
+                      <td id="Clue_D_67" class="Clue">13 down and 59 down</td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">68.</td>
+                      <td id="Clue_D_68" class="Clue">
+                        Type of flower in heteromorphic incompatibility
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">71.</td>
+                      <td id="Clue_D_71" class="Clue">
+                        Type of garden used to compare cultivars
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">72.</td>
+                      <td id="Clue_D_72" class="Clue">
+                        Initials of a type of cross from hybrid to one of the
+                        parents
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">73.</td>
+                      <td id="Clue_D_73" class="Clue">
+                        What normal and mutant chloroplasts do in variedgated
+                        leaved plants
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">74.</td>
+                      <td id="Clue_D_74" class="Clue">
+                        Asexually produced progeny from a single genotype; many
+                        copies of DNA
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">77.</td>
+                      <td id="Clue_D_77" class="Clue">
+                        Becomes the pollen tube
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">78.</td>
+                      <td id="Clue_D_78" class="Clue">
+                        A plant that produces seed without 47 across
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">80.</td>
+                      <td id="Clue_D_80" class="Clue">
+                        Product of 13 down and 59 down
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">81.</td>
+                      <td id="Clue_D_81" class="Clue">
+                        Class with most observations, in a statistical sense
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">82.</td>
+                      <td id="Clue_D_82" class="Clue">
+                        _____gamy is often associated with the development of 20
+                        down fruits
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">85.</td>
+                      <td id="Clue_D_85" class="Clue">
+                        What centromeres do in late prophase of meiosis I
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">86.</td>
+                      <td id="Clue_D_86" class="Clue">
+                        An unclassified cause of plant desease; an FBI person
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ClueNum">88.</td>
+                      <td id="Clue_D_88" class="Clue">
+                        Number of Chromosomes in one Pelargonium zonale genome
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="Feedback" id="FeedbackDiv">
+      <div class="FeedbackText" id="FeedbackContent"></div>
+      <button
+        id="FeedbackOKButton"
+        class="FuncButton"
+        onclick="HideFeedback(); return false;"
+      >
+        &#160;OK&#160;
+      </button>
+    </div>
+
+    <!-- BeginBottomNavButtons -->
+
+    <!-- EndBottomNavButtons -->
+
+    <!-- BeginSubmissionForm -->
+
+    <!-- EndSubmissionForm -->
+  </body>
+</html>
