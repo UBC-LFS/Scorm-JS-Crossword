@@ -332,10 +332,6 @@
         return InArray;
       }
 
-      // function WriteToInstructions(Feedback) {
-      //   document.getElementById("InstructionsDiv").innerHTML = Feedback;
-      // }
-
       function EscapeDoubleQuotes(InString) {
         return InString.replace(/"/g, "&quot;");
       }
@@ -547,6 +543,17 @@
       }
 
       function ShowClue(ClueNum, x, y) {
+        // ADDDED: locked functionality after submission
+        if (Locked) {
+          let lockedMessage = "";
+
+          lockedMessage += "You have already submitted an answer" + ".<br />";
+          lockedMessage += "Thanks for playing!";
+
+          ShowMessage(lockedMessage);
+          return;
+        }
+
         var Result = "";
         var Temp;
         var strParams;
@@ -583,17 +590,6 @@
       }
 
       function EnterGuess(Across, ClueNum, x, y, BoxId) {
-        //ADDED: locked functionality
-        if (Locked) {
-          let lockedMessage = "";
-
-          lockedMessage += "You have already submitted an answer" + ".<br />";
-          lockedMessage += "Thanks for playing!";
-
-          ShowMessage(lockedMessage);
-          return;
-        }
-
         if (document.getElementById(BoxId) != null) {
           var Guess = document.getElementById(BoxId).value;
           var AnsLength = GetAnswerLength(Across, x, y);
@@ -988,7 +984,6 @@
         // }
 
         ShowMessage(Output);
-        // WriteToInstructions(Output);
 
         if (AllCorrect == true || TimeOver == true) {
           TimeOver = true;
@@ -996,10 +991,10 @@
           Finished = true;
         }
 
-        console.log(Locked);
-
         if (Output) {
           Locked = true;
+          doneButton = document.getElementById("CheckButton2");
+          doneButton.remove();
         }
         // if (AllCorrect == true) {
         // } else {
