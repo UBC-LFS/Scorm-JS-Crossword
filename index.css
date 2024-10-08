@@ -31,8 +31,8 @@ body {
   background-color: var(--strPageBGColor);
   color: var(--strTextColor);
 
-  margin-right: 5%;
-  margin-left: 5%;
+  /* margin-right: 0px; */
+  /* margin-left: 0px; */
   font-size: var(--strFontSize);
   padding-bottom: 0.5em;
 }
@@ -55,12 +55,6 @@ div.Titles {
   padding: 0.5em;
   text-align: center;
   color: var(--strTitleColor);
-}
-
-button {
-  font-family: var(--strFontFace);
-  font-size: 1em;
-  display: inline;
 }
 
 .ExerciseTitle {
@@ -118,7 +112,7 @@ table.CrosswordGrid {
 table.CrosswordGrid tbody tr td {
   width: 1.5em;
   height: 1.5em;
-  font-size: 1.7vw;
+  font-size: 1.9vw;
   text-align: center;
   vertical-align: middle;
   padding: 1px;
@@ -222,76 +216,6 @@ div.Keypad button {
   box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
 }
 
-/* JQuiz styles */
-
-div.QuestionNavigation {
-  text-align: center;
-}
-
-.QNum {
-  margin: 0em 1em 0.5em 1em;
-  font-weight: bold;
-  vertical-align: middle;
-}
-
-textarea {
-  font-family: var(--strFontFace);
-}
-
-.QuestionText {
-  text-align: left;
-  margin: 0px;
-  font-size: 1em;
-}
-
-.Answer {
-  font-size: 120%;
-}
-
-.PartialAnswer {
-  font-size: 120%;
-  letter-spacing: 0.1em;
-  color: var(--strTitleColor);
-}
-
-.Highlight {
-  color: #000000;
-  background-color: #ffff00;
-  font-weight: bold;
-  font-size: 120%;
-}
-
-ol.QuizQuestions {
-  text-align: left;
-  list-style-type: none;
-}
-
-li.QuizQuestion {
-  padding: 1em;
-  border-style: solid;
-  border-width: 0px 0px 1px 0px;
-}
-
-ol.MCAnswers {
-  text-align: left;
-  list-style-type: upper-alpha;
-  padding: 1em;
-}
-
-ol.MCAnswers li {
-  margin-bottom: 1em;
-}
-
-ol.MSelAnswers {
-  text-align: left;
-  list-style-type: lower-alpha;
-  padding: 1em;
-}
-
-div.ShortAnswer {
-  padding: 1em;
-}
-
 .FuncButton {
   border-style: solid;
   border-radius: 0.5em;
@@ -317,86 +241,5 @@ div.ShortAnswer {
 .FuncButton:hover {
   color: var(--strExBGColor);
   background-color: var(--strTextColor);
-}
-
-/*BeginNavBarStyle*/
-
-div.NavButtonBar {
-  background-color: var(--strNavBarColor);
-  text-align: center;
-  margin: 0.25rem 0;
-  clear: both;
-  font-size: 1em;
-  padding: 0.2em;
-  box-sizing: border-box;
-}
-
-.NavButton {
-  border-style: solid;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  min-width: 3em;
-
-  border-left-color: var(--strNavLightColor);
-  border-top-color: var(--strNavLightColor);
-  border-right-color: var(--strNavShadeColor);
-  border-bottom-color: var(--strNavShadeColor);
-  background-color: var(--strNavBarColor);
-  color: var(--strNavTextColor);
-
-  border-width: 1pt;
-  cursor: pointer;
-  box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
-}
-
-.NavButton:active {
-  box-shadow: none;
-}
-
-.NavButton:hover {
-  color: var(--strNavBarColor);
-  background-color: var(--strNavTextColor);
-}
-
-/*EndNavBarStyle*/
-
-a {
-  color: var(--strLinkColor);
-}
-
-a:visited {
-  color: var(--strVLinkColor);
-}
-
-a:hover {
-  color: var(--strLinkColor);
-}
-
-div.CardStyle {
-  position: absolute;
-  font-family: var(--strFontFace);
-  font-size: 1em;
-  border-style: solid;
-  border-radius: 0.5em;
-  padding: 0.5em;
-  min-width: 2em;
-  border-width: 1pt;
-  color: var(--strTextColor);
-  box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
-  background-color: var(--strExBGColor);
-  left: -50px;
-  top: -50px;
-  overflow: visible;
-  touch-action: none;
-  user-select: none;
-  box-sizing: border-box;
-}
-
-div.CardStyleCentered {
-  text-align: center;
-}
-
-.rtl {
-  text-align: right;
-  font-size: 140%;
+  transition: 0.5s;
 }
