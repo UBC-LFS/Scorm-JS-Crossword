@@ -7,7 +7,7 @@
 
 /* CSS variables for colours. */
 :root {
-  --strFontFace: Geneva, Arial, sans-serif;
+  --strFontFace: Inter, Arial, sans-serif;
   --strFontSize: medium;
   --strTextColor: #000000;
   --strTitleColor: #000000;
@@ -18,11 +18,11 @@
   --strVLinkColor: #0000cc;
 
   --strNavBarColor: #000000;
-  --strNavLightColor: #7f7f7f;
+  --strNavLightColor: #a7a0a0;
   --strNavShadeColor: #000000;
   --strNavTextColor: #ffffff;
 
-  --strPageBGColor: #c0c0c0;
+  --strPageBGColor: #dcdcdc;
   --strExBGColor: #ffffff;
 }
 
@@ -77,6 +77,7 @@ div.StdDiv,
 div.ExerciseContainer,
 div.ReadingContainer {
   background-color: var(--strExBGColor);
+  border-radius: 2px;
   text-align: center;
   font-size: 1em;
   color: var(--strTextColor);
@@ -105,233 +106,21 @@ div#ContainerDiv {
   justify-content: space-between;
 }
 
-/* EndCorePageCSS */
-
-.RTLText {
-  text-align: right;
-  font-size: 150%;
-  direction: rtl;
-  font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman",
-    var(--strFontFace);
-}
-
-.CentredRTLText {
-  text-align: center;
-  font-size: 150%;
-  direction: rtl;
-  font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman",
-    var(--strFontFace);
-}
-
-button p.RTLText {
-  text-align: center;
-}
-
-.RTLGapBox {
-  text-align: right;
-  font-size: 150%;
-  direction: rtl;
-  font-family: "Times New Roman", var(--strFontFace);
-}
-
-.Guess {
-  font-weight: bold;
-}
-
-.CorrectAnswer {
-  font-weight: bold;
-}
-
-div#Timer {
-  padding: 0.25em;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  color: var(--strTitleColor);
-}
-
-span#TimerText {
-  padding: 0.25em;
-  border-width: 1px;
-  border-style: solid;
-  font-weight: bold;
-  display: none;
-  color: var(--strTitleColor);
-}
-
-.FeedbackText,
-.FeedbackText span.CorrectAnswer,
-.FeedbackText span.Guess,
-.FeedbackText span.Answer {
-  color: var(--strTitleColor);
-}
-
-.LeftItem {
-  font-size: 1em;
-  color: var(--strTextColor);
-  text-align: left;
-}
-
-.RightItem {
-  font-weight: bold;
-  font-size: 1em;
-  color: var(--strTextColor);
-  text-align: left;
-}
-
-input,
-textarea {
-  font-family: var(--strFontFace);
-  font-size: 120%;
-}
-
-select {
-  font-size: 1em;
-}
-
-div.Feedback {
-  background-color: var(--strPageBGColor);
-  left: 33%;
-  width: 38%;
-  z-index: 1;
-  border-style: solid;
-  border-width: 1px;
-  padding: 5px;
-  text-align: center;
-  color: var(--strTitleColor);
-  position: absolute;
-  display: none;
-  font-size: 1em;
-}
-
-div.ExerciseDiv {
-  color: var(--strTextColor);
-}
-
-/* JMatch standard output table. */
-table.MatchTable {
-  margin: 2em auto;
-  border-width: 0;
-}
-
-/* JMatch flashcard styles */
-table.FlashcardTable {
-  background-color: transparent;
-  color: var(--strTextColor);
-  border-color: var(--strTextColor);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  /*width: 90%;*/
-  position: relative;
-  text-align: center;
-  padding: 0px;
-}
-
-table.FlashcardTable tr {
-  border-style: none;
-  margin: 0px;
-  padding: 0px;
-  background-color: var(--strExBGColor);
-}
-
-table.FlashcardTable td.Showing {
-  font-size: 140%;
-  text-align: center;
-  width: 50%;
-  display: table-cell;
-  padding: 2em;
-  margin: 0px;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.5em;
-  color: var(--strTextColor);
-  box-shadow: 0.2em 0.3em 0.2em var(--strNavShadeColor);
-  background-color: var(--strPageBGColor);
-}
-
-table.FlashcardTable td.Hidden {
-  display: none;
-}
-
-/* JMix styles */
-div.JMixDrag,
-div.JMatchDrag {
-  padding: 0;
-  background-color: var(--strPageBGColor);
-  border-style: none;
-}
-
-div#GuessDiv {
-  padding: 0.5em;
-  margin-bottom: 2em;
-}
-
-div#SegmentDiv {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  text-align: center;
-}
-
-a.ExSegment {
-  font-size: 120%;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--strTextColor);
-  display: inline-block;
-  padding: 0.5em;
-  border: solid 1pt gray;
-  margin-bottom: 0.5em;
-}
-
-span.RemainingWordList {
-  font-style: italic;
-}
-
-div.DropLine {
-  position: absolute;
-  text-align: left;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: var(--strTitleColor);
-  width: 80%;
-  left: 10%;
-}
-
-/* JCloze styles */
-
-.ClozeWordList {
-  text-align: center;
-  font-weight: bold;
-}
-
-div.ClozeBody {
-  text-align: left;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  line-height: 2;
-}
-
-span.GapSpan {
-  font-weight: bold;
-}
-
 /* JCross styles */
 
 table.CrosswordGrid {
-  margin: auto auto 1em auto;
+  margin: auto auto auto auto;
   border-collapse: collapse;
-  padding: 0px;
+  margin-bottom: 10px;
   background-color: #000000;
 }
 
 table.CrosswordGrid tbody tr td {
   width: 1.5em;
   height: 1.5em;
+  font-size: 1.7vw;
   text-align: center;
   vertical-align: middle;
-  font-size: 140%;
   padding: 1px;
   margin: 0px;
   border-style: solid;
