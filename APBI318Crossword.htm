@@ -931,6 +931,8 @@
 
       function CheckAnswers() {
         if (Locked == true) {
+          console.log("Locked!");
+
           return;
         }
 
@@ -1041,6 +1043,7 @@
           submission so make sure you are fully done when you submit.
       </div>
     </div>
+
 
     <div id="ContainerDiv">
       <div class="ExerciseContainer">
@@ -3889,6 +3892,16 @@
     </div>
 
     <!-- BeginBottomNavButtons -->
+    <div class="Feedback" id="FeedbackDiv">
+      <div class="FeedbackText" id="FeedbackContent"></div>
+      <button
+        id="FeedbackOKButton"
+        class="FuncButton"
+        onclick="HideFeedback(); return false;"
+      >
+        OK
+      </button>
+    </div>
 
     <!-- EndBottomNavButtons -->
 
