@@ -19,13 +19,310 @@
     <meta name="dc:creator" content="Gabriel" />
     <meta name="dc:title" content="APBI 318 Crossword" />
 
-    <link rel="stylesheet" href="index.css" />
+    <!-- <link rel="stylesheet" href="index.css" /> -->
 
     <title>APBI 318 Crossword</title>
 
     <!-- Made with executable version 7.0 Release 3 Build 0 -->
 
     <!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
+
+    <style>
+      /* This is the CSS stylesheet used in the exercise. */
+      /* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+      /* BeginCorePageCSS */
+
+      /* Made with executable version 7.0 Release 3 Build 0 */
+
+      /* CSS variables for colours. */
+      :root {
+        --strFontFace: Inter, Arial, sans-serif;
+        --strFontSize: medium;
+        --strTextColor: #000000;
+        --strTitleColor: #000000;
+
+        --strFuncLightColor: #ffffff;
+        --strFuncShadeColor: #7f7f7f;
+        --strLinkColor: #0000ff;
+        --strVLinkColor: #0000cc;
+
+        --strNavBarColor: #000000;
+        --strNavLightColor: #a7a0a0;
+        --strNavShadeColor: #000000;
+        --strNavTextColor: #ffffff;
+
+        --strPageBGColor: #dcdcdc;
+        --strExBGColor: #ffffff;
+      }
+
+      body {
+        font-family: var(--strFontFace);
+        background-color: var(--strPageBGColor);
+        color: var(--strTextColor);
+
+        /* margin-right: 0px; */
+        /* margin-left: 0px; */
+        font-size: var(--strFontSize);
+        padding-bottom: 0.5em;
+      }
+
+      p {
+        text-align: left;
+        margin: 0px;
+        font-size: 1em;
+      }
+
+      table,
+      div,
+      span,
+      td {
+        font-size: 1em;
+        color: var(--strTextColor);
+      }
+
+      div.Titles {
+        padding: 0.5em;
+        text-align: center;
+        color: var(--strTitleColor);
+      }
+
+      .ExerciseTitle {
+        font-size: 140%;
+        color: var(--strTitleColor);
+      }
+
+      .ExerciseSubtitle {
+        font-size: 120%;
+        color: var(--strTitleColor);
+      }
+
+      div.StdDiv,
+      div.ExerciseContainer,
+      div.ReadingContainer {
+        background-color: var(--strExBGColor);
+        border-radius: 2px;
+        text-align: center;
+        font-size: 1em;
+        color: var(--strTextColor);
+        padding: 0.5em;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-color: var(--strTextColor);
+        margin-bottom: 1px;
+      }
+
+      div.ReadingContainer,
+      div.ExerciseContainer {
+        min-width: 15em;
+        flex-grow: 1;
+        flex-basis: 0;
+        margin: 1px;
+      }
+
+      div#ContainerDiv {
+        margin: -1px;
+        padding: 0;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      /* JCross styles */
+
+      .FeedbackText,
+      .FeedbackText span.CorrectAnswer,
+      .FeedbackText span.Guess,
+      .FeedbackText span.Answer {
+        color: var(--strTitleColor);
+      }
+
+      div.Feedback {
+        background-color: var(--strPageBGColor);
+        left: 33%;
+        width: 38%;
+        z-index: 1;
+        border-style: solid;
+        border-width: 1px;
+        padding: 5px;
+        text-align: center;
+        color: var(--strTitleColor);
+        position: absolute;
+        display: none;
+        font-size: 1em;
+      }
+
+      .FuncButton {
+        border-style: solid;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        min-width: 3em;
+
+        border-left-color: var(--strFuncLightColor);
+        border-top-color: var(--strFuncLightColor);
+        border-right-color: var(--strFuncShadeColor);
+        border-bottom-color: var(--strFuncShadeColor);
+        color: var(--strTextColor);
+        background-color: var(--strExBGColor);
+
+        border-width: 1pt;
+        cursor: pointer;
+        box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+      }
+
+      .FuncButton:active {
+        box-shadow: none;
+      }
+
+      .FuncButton:hover {
+        color: var(--strExBGColor);
+        background-color: var(--strTextColor);
+      }
+
+      table.CrosswordGrid {
+        margin: auto auto auto auto;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        background-color: #000000;
+      }
+
+      table.CrosswordGrid tbody tr td {
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 1.9vw;
+        text-align: center;
+        vertical-align: middle;
+        padding: 1px;
+        margin: 0px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #000000;
+        color: #000000;
+      }
+
+      table.CrosswordGrid span {
+        color: #000000;
+      }
+
+      table.CrosswordGrid td.BlankCell {
+        background-color: #000000;
+        color: #000000;
+      }
+
+      table.CrosswordGrid td.LetterOnlyCell {
+        text-align: center;
+        vertical-align: middle;
+        background-color: #ffffff;
+        color: #000000;
+        font-weight: bold;
+      }
+
+      table.CrosswordGrid td.NumLetterCell {
+        text-align: left;
+        vertical-align: top;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 1px;
+        font-weight: bold;
+      }
+
+      .NumLetterCellText {
+        cursor: pointer;
+        color: #000000;
+      }
+
+      .GridNum {
+        vertical-align: super;
+        font-size: 66%;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .GridNum:hover,
+      .GridNum:visited {
+        color: #000000;
+      }
+
+      table#Clues {
+        margin: auto;
+        vertical-align: top;
+      }
+
+      table#Clues td {
+        vertical-align: top;
+      }
+
+      table.ClueList {
+        margin: auto;
+      }
+
+      td.ClueNum {
+        text-align: right;
+        font-weight: bold;
+        vertical-align: top;
+      }
+
+      td.Clue {
+        text-align: left;
+      }
+
+      div#ClueEntry {
+        text-align: left;
+        margin-bottom: 1em;
+      }
+
+      /* Keypad styles */
+
+      div.Keypad {
+        text-align: center;
+        display: none; /* initially hidden, shown if needed */
+        margin-bottom: 0.5em;
+      }
+
+      div.Keypad button {
+        font-family: var(--strFontFace);
+        font-size: 120%;
+        background-color: #ffffff;
+        color: #000000;
+        width: 2em;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 0.5em;
+        color: var(--strTextColor);
+        box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
+      }
+
+      .FuncButton {
+        border-style: solid;
+        border-radius: 0.5em;
+        padding: 0.5em;
+        min-width: 3em;
+
+        border-left-color: var(--strFuncLightColor);
+        border-top-color: var(--strFuncLightColor);
+        border-right-color: var(--strFuncShadeColor);
+        border-bottom-color: var(--strFuncShadeColor);
+        color: var(--strTextColor);
+        background-color: var(--strExBGColor);
+
+        border-width: 1pt;
+        cursor: pointer;
+        box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+      }
+
+      .FuncButton:active {
+        box-shadow: none;
+      }
+
+      .FuncButton:hover {
+        color: var(--strExBGColor);
+        background-color: var(--strTextColor);
+        transition: 0.5s;
+      }
+    </style>
 
     <script>
       //<![CDATA[
@@ -82,20 +379,20 @@
         }
       }
 
-      // function SetScormIncomplete() {
-      //   if (ScormSubmitted == true) {
-      //     return;
-      //   }
-      //   SetScormScore();
-      //   if (API != null) {
-      //     API.LMSSetValue("cmi.core.lesson_status", "incomplete");
-      //     API.LMSSetValue(
-      //       "cmi.core.session_time",
-      //       MillisecondsToTime(new Date().getTime() - ScormStartTime)
-      //     );
-      //     API.LMSCommit("");
-      //   }
-      // }
+      function SetScormIncomplete() {
+        if (ScormSubmitted == true) {
+          return;
+        }
+        SetScormScore();
+        if (API != null) {
+          API.LMSSetValue("cmi.core.lesson_status", "incomplete");
+          API.LMSSetValue(
+            "cmi.core.session_time",
+            MillisecondsToTime(new Date().getTime() - ScormStartTime)
+          );
+          API.LMSCommit("");
+        }
+      }
 
       function SetScormComplete() {
         if (API != null) {
@@ -106,7 +403,7 @@
           API.LMSSetValue("cmi.core.lesson_status", "completed");
           SetScormScore();
           API.LMSCommit("");
-          API.LMSFinish("");
+          // API.LMSFinish(""); !!! MIGHT NEED LOL
           ScormSubmitted = true;
         }
       }
@@ -451,6 +748,10 @@
       function SetScormScore() {
         //Reports the current score and any other information back to the LMS
         if (API != null) {
+          if (API.LMSGetValue("cmi.core.score.raw")) {
+            alert("should not reach SetScormScore()!! ERROR");
+            return;
+          }
           API.LMSSetValue("cmi.core.score.raw", Score);
 
           //Now send a detailed reports on the item
@@ -594,7 +895,6 @@
           var Guess = document.getElementById(BoxId).value;
           var AnsLength = GetAnswerLength(Across, x, y);
           EnterAnswer(Guess, Across, AnsLength, x, y);
-          console.log("entering guess");
         }
       }
 
@@ -930,12 +1230,15 @@
       G[35] = new Array('','','','','','','','','','','','','','','','','','','','','','','','','','','');
 
       function CheckAnswers() {
-        if (Locked == true) {
-          console.log("Locked!");
-
-          return;
+        if (API != null) {
+          if (API.LMSGetValue("cmi.core.score.raw")) {
+            var Output = "";
+            Output += "You have already submitted! " + "<br />";
+            Output += "Thanks for playing!";
+            ShowMessage(Output);
+            return;
+          }
         }
-
         // var AllCorrect = true;
         var TotLetters = 0;
         var CorrectLetters = 0;
@@ -973,35 +1276,15 @@
 
         //Compile the output
         var Output = "";
-
-        // if (AllCorrect == true) {
-        //   Output = Correct + "<br />";
-        // }
-
         Output += "Your final score is " + Score + "%.<br />";
         Output += "Thanks for playing!";
-        // if (AllCorrect == false) {
-        //   Output += Incorrect;
-        //   Penalties++;
-        // }
-
         ShowMessage(Output);
-
-        if (AllCorrect == true || TimeOver == true) {
-          TimeOver = true;
-          Locked = true;
-          Finished = true;
-        }
 
         if (Output) {
           Locked = true;
           doneButton = document.getElementById("CheckButton2");
           doneButton.remove();
         }
-        // if (AllCorrect == true) {
-        // } else {
-        //   SetScormIncomplete();
-        // }
         SetScormComplete();
       }
 
