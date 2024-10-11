@@ -9,3 +9,4 @@
 1. Fork Repository
 2. Cater answers inside of the HTM file to your liking
 3. Create a SCORM package using an authoring tool or from scratch
+4. Upload to preferred LMS and you're done!
