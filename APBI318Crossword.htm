@@ -369,6 +369,7 @@
       }
 
       // EFFECT: turn ScormSubmitted to be true if false
+
       function CheckLMSFinish() {
         if (API != null) {
           if (ScormSubmitted == false) {
@@ -403,7 +404,7 @@
           API.LMSSetValue("cmi.core.lesson_status", "completed");
           SetScormScore();
           API.LMSCommit("");
-          // API.LMSFinish(""); !!! MIGHT NEED LOL
+          // API.LMSFinish(""); // prevents SCORM from shutting down after submission
           ScormSubmitted = true;
         }
       }
@@ -748,12 +749,7 @@
       function SetScormScore() {
         //Reports the current score and any other information back to the LMS
         if (API != null) {
-          if (API.LMSGetValue("cmi.core.score.raw")) {
-            alert("should not reach SetScormScore()!! ERROR");
-            return;
-          }
           API.LMSSetValue("cmi.core.score.raw", Score);
-
           //Now send a detailed reports on the item
           var ItemLabel = "Crossword";
           API.LMSSetValue("cmi.objectives.0.id", "obj" + ItemLabel);
@@ -1188,18 +1184,15 @@
       //prettier-ignore
       G[16] = new Array('','','','','','','','','','','','','','','','','','','','','','','','','','','');
       //prettier-ignore
-      //prettier-ignore
       G[17] = new Array('','','','','','','','','','','','','','','','','','','','','','','','','','','');
       //prettier-ignore
       G[18] = new Array('','','','','','','','','','','','','','','','','','','','','','','','','','','');
-      //prettier-ignore
       //prettier-ignore
       G[19] = new Array('','','','','','','','','','','','','','','','','','','','','','','','','','','');
       //prettier-ignore
       G[20] = new Array('','','','','','','','','','','','','','','','','','','','','','','','','','','');
       //prettier-ignore
       G[21] = new Array('','','','','','','','','','','','','','','','','','','','','','','','','','','');
-      //prettier-ignore
       //prettier-ignore
       G[22] = new Array('','','','','','','','','','','','','','','','','','','','','','','','','','','');
       //prettier-ignore
@@ -1236,6 +1229,8 @@
             Output += "You have already submitted! " + "<br />";
             Output += "Thanks for playing!";
             ShowMessage(Output);
+            doneButton = document.getElementById("CheckButton2");
+            doneButton.remove();
             return;
           }
         }
