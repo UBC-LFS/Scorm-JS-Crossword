@@ -804,6 +804,34 @@
 
       function StartUp() {
         //Show a keypad if there is one	(added bugfix for 6.0.4.12)
+        if (localStorage) {
+          for (let i = 0; i < localStorage.length; i++) {
+            let curStoredWord = localStorage.key(i);
+            let curStoredWordInfo = localStorage.getItem(localStorage.key(i));
+
+            try {
+              JSON.parse(curStoredWordInfo);
+            } catch (e) {
+              continue;
+            }
+
+            storedInfo = JSON.parse(curStoredWordInfo);
+
+            let storedAcross = storedInfo[0];
+            let storedAnsLength = storedInfo[1];
+            let storedX = storedInfo[2];
+            let storedY = storedInfo[3];
+
+            EnterAnswer(
+              curStoredWord,
+              storedAcross,
+              storedAnsLength,
+              storedX,
+              storedY
+            );
+          }
+        }
+
         if (document.getElementById("CharacterKeypad") != null) {
           document.getElementById("CharacterKeypad").style.display = "block";
         }
@@ -909,6 +937,9 @@
                 PC[Letter];
             }
           }
+          //store into local storage here!
+          const stored = [].concat(Across, AnsLength, x, y);
+          localStorage.setItem(Guess, JSON.stringify(stored));
           if (Across == true) {
             j++;
           } else {
@@ -916,11 +947,6 @@
           }
           Letter++;
         }
-
-        // !!! LEARN HOW TO STORE INTO LOCAL STORAGE WITH THIS? probably save these parameters ("L_" + i + "_" + j)
-        // call enter answer on load and pass in the params
-        // Do I make a save button or do I auto save?
-        // whats the diff of cookies and local storage and cache?
       }
 
       function SplitStringToPerceivedChars(InString, PC) {
