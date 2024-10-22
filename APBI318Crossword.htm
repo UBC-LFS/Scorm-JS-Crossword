@@ -359,6 +359,10 @@
       // EFFECT: intialize API and finish initialization if API not null
       function ScormStartUp() {
         initAPI(window);
+        // if (API != null && API.LMSGetValue("cmi.core.score.raw")) {
+        //   //!!! FIRST DEBUG: stop from loading if there is a grade given
+        //   API.LMSFinish(""); // prevents SCORM from shutting down after submission
+        // }
         if (API != null) {
           API.LMSInitialize("");
           API.LMSSetValue("cmi.core.lesson_status", "browsed");
@@ -935,6 +939,7 @@
             if (document.getElementById("L_" + i + "_" + j) != null) {
               document.getElementById("L_" + i + "_" + j).innerHTML =
                 PC[Letter];
+              // !!! SECOND DEBUG: add toUpperCase() for an uppercase answer
             }
           }
           //store into local storage here!
@@ -1284,9 +1289,10 @@
                 LetterFromGuess = G[i][j].toUpperCase();
               }
               if (LetterFromGuess != LetterFromKey) {
-                G[i][j] = "";
+                // G[i][j] = "";
                 //Blank that square in the grid
-                SetGridSquareValue(i, j, "");
+                // SetGridSquareValue(i, j, "");
+                //!!! THIRD DEBUG: does not remove wrong letters, therefore not showing correct letters
                 AllCorrect = false;
               } else {
                 CorrectLetters++;
