@@ -809,7 +809,14 @@
       function StartUp() {
         //Show a keypad if there is one	(added bugfix for 6.0.4.12)
         if (localStorage) {
+          checkDup = {};
+
           for (let i = 0; i < localStorage.length; i++) {
+            // if (!(checkDup.has(localStorage.key(i)))) {
+            //   checkDup.set(localStorage.key(i), localStorage.getItem(localStorage.key(i)))
+            // } else {
+
+            // }
             let curStoredWord = localStorage.key(i);
             let curStoredWordInfo = localStorage.getItem(localStorage.key(i));
 
@@ -938,13 +945,34 @@
             G[i][j] = PC[Letter];
             if (document.getElementById("L_" + i + "_" + j) != null) {
               document.getElementById("L_" + i + "_" + j).innerHTML =
-                PC[Letter];
-              // !!! SECOND DEBUG: add toUpperCase() for an uppercase answer
+                PC[Letter].toUpperCase();
             }
           }
           //store into local storage here!
           const stored = [].concat(Across, AnsLength, x, y);
+
+          const stringStored = JSON.stringify(stored);
+
+          let items = { ...localStorage };
+          let curValues = Object.values(items);
+
+          if (curValues.includes(stringStored)) {
+            // check if current input has a dup (gets rid of overwrite bug with local storage)
+            let curIndex = curValues.indexOf(stringStored);
+            if (curIndex > -1) {
+              //valid index
+              let key = localStorage.key(curIndex);
+              if (localStorage.getItem(key)) {
+                localStorage.removeItem(key);
+              }
+            }
+          }
+
+          //add border around crossword for visuals
+          //make it so they can't see the puzzle after submission
+
           localStorage.setItem(Guess, JSON.stringify(stored));
+          //check if localstorage value list already has stored, remove the other one and store new one
           if (Across == true) {
             j++;
           } else {
