@@ -345,6 +345,7 @@
 
       /* initialize the SCORM API */
       function initAPI(win) {
+        console.log("initializing api!!");
         /* look for the SCORM API up in the frameset */
         findAPI(win);
 
@@ -357,18 +358,25 @@
       var ScormSubmitted = false; //use this to check whether LMSFinish has been called later.
 
       // EFFECT: intialize API and finish initialization if API not null
-      function ScormStartUp() {
-        initAPI(window);
+      async function ScormStartUp() {
+        console.log("starting up!!");
+        await initAPI(window);
         // if (API != null && API.LMSGetValue("cmi.core.score.raw")) {
+        //   console.log(API.LMSGetValue("cmi.core.score.raw"));
         //   //!!! FIRST DEBUG: stop from loading if there is a grade given
         //   API.LMSFinish(""); // prevents SCORM from shutting down after submission
         // }
+
         if (API != null) {
+          let curScore = API.LMSGetValue("cmi.core.score.raw");
+          //FIGURE OUT HOW TO LMS FINISH TS
           API.LMSInitialize("");
           API.LMSSetValue("cmi.core.lesson_status", "browsed");
           API.LMSSetValue("cmi.core.score.min", 0);
           API.LMSSetValue("cmi.core.score.max", 100);
           API.LMSCommit("");
+        } else {
+          console.log("SCORM API IS NULL");
         }
       }
 
