@@ -1260,6 +1260,7 @@
 
       function CheckAnswers() {
         if (API != null) {
+          //add >= 0 to lmsGetValue because it does not check if the students grade is 0%
           if (API.LMSGetValue("cmi.core.score.raw")) {
             var Output = "";
             Output += "You have already submitted! " + "<br />";
