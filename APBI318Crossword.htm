@@ -360,7 +360,7 @@
       // EFFECT: intialize API and finish initialization if API not null
       async function ScormStartUp() {
         console.log("starting up!!");
-        await initAPI(window);
+        await initAPI(window); // see if this await actually awaits and when does API != null during the program
         // if (API != null && API.LMSGetValue("cmi.core.score.raw")) {
         //   console.log(API.LMSGetValue("cmi.core.score.raw"));
         //   //!!! FIRST DEBUG: stop from loading if there is a grade given
