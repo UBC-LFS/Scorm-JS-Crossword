@@ -345,7 +345,6 @@
 
       /* initialize the SCORM API */
       function initAPI(win) {
-        console.log("initializing api!!");
         /* look for the SCORM API up in the frameset */
         findAPI(win);
 
@@ -375,24 +374,17 @@
 
           let curScore = API.LMSGetValue("cmi.core.score.raw");
           if (curScore) {
-            console.log("CUR SCORE EXISTS LOOK", curScore);
-          } else {
-            console.log("CUR SCORE DNE", curScore);
+            API.LMSFinish(""); // kill program if student already has a score
           }
-          // if (curScore) {
-          //   setScormComplete();
-          //   return;
-          // }
           API.LMSCommit("");
         } else {
-          console.log("SCORM API IS NULL");
+          console.log("Scorm API is NULL");
         }
       }
 
       // EFFECT: turn ScormSubmitted to be true if false
       function CheckLMSFinish() {
         if (API != null) {
-          console.log("AT LMS CHECK FINISH");
           if (ScormSubmitted == false) {
             API.LMSCommit("");
             API.LMSFinish("");
@@ -407,7 +399,6 @@
         }
         SetScormScore();
         if (API != null) {
-          console.log("AT SCORM SCORE");
           API.LMSSetValue("cmi.core.lesson_status", "incomplete");
           API.LMSSetValue(
             "cmi.core.session_time",
@@ -419,7 +410,6 @@
 
       function SetScormComplete() {
         if (API != null) {
-          console.log("AT SCORM COMPLETE");
           API.LMSSetValue(
             "cmi.core.session_time",
             MillisecondsToTime(new Date().getTime() - ScormStartTime)
@@ -427,7 +417,6 @@
           API.LMSSetValue("cmi.core.lesson_status", "completed");
           SetScormScore();
           API.LMSCommit("");
-          // API.LMSFinish(""); // prevents SCORM from shutting down after submission
           ScormSubmitted = true;
         }
       }
@@ -438,7 +427,6 @@
 
       function SetScormTimedOut() {
         if (API != null) {
-          console.log("AT SCORM TIME OUT");
           if (ScormSubmitted == false) {
             SetScormScore();
             API.LMSSetValue("cmi.core.exit", "time-out");
@@ -773,7 +761,6 @@
       function SetScormScore() {
         //Reports the current score and any other information back to the LMS
         if (API != null) {
-          console.log("SETTING SCORE");
           API.LMSSetValue("cmi.core.score.raw", Score);
           //Now send a detailed reports on the item
           var ItemLabel = "Crossword";
@@ -1309,7 +1296,6 @@
 
       function CheckAnswers() {
         if (API != null) {
-          console.log("CHECKING ANSWER");
           //add >= 0 to lmsGetValue because it does not check if the students grade is 0%
           if (API.LMSGetValue("cmi.core.score.raw")) {
             var Output = "";
