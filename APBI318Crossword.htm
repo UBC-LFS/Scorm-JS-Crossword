@@ -780,7 +780,6 @@
       var Incorrect =
         "Some of your answers are incorrect. Incorrect squares have been blanked out.";
       var GiveHint = "A correct letter has been added.";
-      // var YourScoreIs = "Your score is ";
       var BuiltGrid = "";
       var BuiltExercise = "";
       var Penalties = 0;
@@ -937,7 +936,7 @@
                 PC[Letter].toUpperCase();
             }
           }
-          //store into local storage here!
+          //stores into local storage here!
           const stored = [].concat(Across, AnsLength, x, y);
 
           const stringStored = JSON.stringify(stored);
@@ -958,7 +957,6 @@
           }
 
           localStorage.setItem(Guess, JSON.stringify(stored));
-          //check if localstorage value list already has stored, remove the other one and store new one
           if (Across == true) {
             j++;
           } else {
@@ -1274,7 +1272,6 @@
 
       function CheckAnswers() {
         if (API != null) {
-          //add >= 0 to lmsGetValue because it does not check if the students grade is 0%
           if (API.LMSGetValue("cmi.core.score.raw")) {
             var Output = "";
             Output += "You have already submitted! " + "<br />";
@@ -1285,7 +1282,6 @@
             return;
           }
         }
-        // var AllCorrect = true;
         var TotLetters = 0;
         var CorrectLetters = 0;
         var LetterFromKey = "";
@@ -3552,7 +3548,7 @@
         </div>
 
         <button id="CheckButton2" class="FuncButton" onclick="CheckAnswers()">
-          Final Submission
+          Hand in
         </button>
 
         <table id="Clues">
