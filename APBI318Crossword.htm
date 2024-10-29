@@ -379,6 +379,14 @@
           if (curScore) {
             API.LMSFinish(""); // kill program if student already has a score
             return;
+          } else {
+            let startMessage = "";
+
+            startMessage +=
+              "NOTICE: You have ONE submission for this assignment!" + "<br />";
+            startMessage += "Completely finished before submitting!";
+
+            ShowMessage(startMessage);
           }
           API.LMSCommit("");
         } else {
