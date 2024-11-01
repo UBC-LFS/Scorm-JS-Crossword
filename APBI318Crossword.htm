@@ -161,9 +161,10 @@
       .FuncButton {
         border-style: solid;
         border-radius: 0.5em;
-        padding: 0.5em;
         min-width: 3em;
-
+        font-size: 16px;
+        width: 5em;
+        height: 2.5em;
         border-left-color: var(--strFuncLightColor);
         border-top-color: var(--strFuncLightColor);
         border-right-color: var(--strFuncShadeColor);
@@ -307,7 +308,7 @@
         box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
       }
 
-      .FuncButton {
+      .enterButton {
         border-style: solid;
         border-radius: 0.5em;
         padding: 0.5em;
@@ -325,11 +326,12 @@
         box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
       }
 
-      .FuncButton:active {
+
+      .FuncButton:active, .enterButton:active {
         box-shadow: none;
       }
 
-      .FuncButton:hover {
+      .FuncButton:hover, .enterButton:hover {
         color: var(--strExBGColor);
         background-color: var(--strTextColor);
         transition: 0.5s;
@@ -806,7 +808,7 @@
       InputStuff +=
         '[strClue] <input autocomplete="off" onfocus="CurrentBox=this;InTextBox=true;" onblur="InTextBox=false;" id="[strBoxId]" type="edit" size="[strEditSize]" maxlength="[strMaxLength]"></input>';
       InputStuff +=
-        '<button class="FuncButton" onclick="EnterGuess([strParams])">Enter</button>';
+        '<button class="enterButton" onclick="EnterGuess([strParams])">Enter</button>';
       InputStuff += "";
       InputStuff += "</form>";
 
@@ -3572,7 +3574,7 @@
                     <tr>
                       <td colspan="2">
                         <h3 class="ExerciseSubtitle" id="CluesAcrossLabel">
-                          Across:
+                          Across
                         </h3>
                       </td>
                     </tr>
@@ -3901,7 +3903,7 @@
                     <tr>
                       <td colspan="2">
                         <h3 class="ExerciseSubtitle" id="CluesDownLabel">
-                          Down:
+                          Down
                         </h3>
                       </td>
                     </tr>
@@ -4235,7 +4237,7 @@
       <div class="FeedbackText" id="FeedbackContent"></div>
       <button
         id="FeedbackOKButton"
-        class="FuncButton"
+        class="enterButton"
         onclick="HideFeedback(); return false;"
       >
         OK
