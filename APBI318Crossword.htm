@@ -326,12 +326,13 @@
         box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
       }
 
-
-      .FuncButton:active, .enterButton:active {
+      .FuncButton:active,
+      .enterButton:active {
         box-shadow: none;
       }
 
-      .FuncButton:hover, .enterButton:hover {
+      .FuncButton:hover,
+      .enterButton:hover {
         color: var(--strExBGColor);
         background-color: var(--strTextColor);
         transition: 0.5s;
@@ -807,8 +808,11 @@
         '<form method="post" id="hint-section" action="" onsubmit="return false;"><span class="ClueNum">[strClueNum]: </span>';
       InputStuff +=
         '[strClue] <input autocomplete="off" onfocus="CurrentBox=this;InTextBox=true;" onblur="InTextBox=false;" id="[strBoxId]" type="edit" size="[strEditSize]" maxlength="[strMaxLength]"></input>';
+      //TODO find a way to put in the answer word in the input box
       InputStuff +=
         '<button class="enterButton" onclick="EnterGuess([strParams])">Enter</button>';
+      InputStuff +=
+        '<button class="enterButton" onclick="clearAnswer([strParams])">Clear</button>';
       InputStuff += "";
       InputStuff += "</form>";
 
@@ -926,6 +930,13 @@
         }
         document.getElementById("ClueEntry").innerHTML = Result;
       }
+
+      //clear the current answer hovered over
+      const clearAnswer = (Across, ClueNum, x, y, BoxId) => {
+        curAnswerLength = GetAnswerLength(Across, x, y);
+        clearSpace = " ".repeat(curAnswerLength);
+        EnterAnswer(clearSpace, Across, curAnswerLength, x, y);
+      };
 
       function EnterGuess(Across, ClueNum, x, y, BoxId) {
         if (document.getElementById(BoxId) != null) {
