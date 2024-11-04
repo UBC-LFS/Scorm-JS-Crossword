@@ -15,6 +15,12 @@
       content="Hot Potatoes, Hot Potatoes, Half-Baked Software, Windows, University of Victoria"
     />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <meta name="dc:creator" content="Gabriel" />
     <meta name="dc:title" content="APBI 318 Crossword" />
@@ -37,7 +43,7 @@
 
       /* CSS variables for colours. */
       :root {
-        --strFontFace: Arial, sans-serif;
+        --strFontFace: "Roboto", sans-serif;
         --strFontSize: medium;
         --strTextColor: #000000;
         --strTitleColor: #000000;
@@ -52,8 +58,11 @@
         --strNavShadeColor: #000000;
         --strNavTextColor: #ffffff;
 
-        --strPageBGColor: #dcdcdc;
-        --strExBGColor: #ffffff;
+        /* this changes background color */
+        --strPageBGColor: #6b9b69;
+
+        /* inner box color */
+        --strExBGColor: #cfcdcd;
       }
 
       html {
@@ -110,9 +119,10 @@
         font-size: 1em;
         color: var(--strTextColor);
         padding: 0.5em;
-        border-style: solid;
+        /* border-style: solid; */
         border-width: 1px 1px 1px 1px;
-        border-color: var(--strTextColor);
+        border-radius: 10px;
+        /* border-color: var(--strTextColor); */
         margin-bottom: 1px;
       }
 
@@ -189,9 +199,11 @@
       .crossword-border {
         justify-content: center;
         border: 5px solid black;
+        border-radius: 10px;
         width: fit-content;
         margin-bottom: 10px;
         margin-left: -3px;
+        margin-top: -10px;
       }
 
       table.CrosswordGrid {
