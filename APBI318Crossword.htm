@@ -62,7 +62,7 @@
         --strPageBGColor: #6b9b69;
 
         /* inner box color */
-        --strExBGColor: #c3b3a6;
+        --strExBGColor: #d3c7bd;
       }
 
       html {
@@ -175,16 +175,17 @@
         font-size: 16px;
         width: 5em;
         height: 2.5em;
-        border-left-color: var(--strFuncLightColor);
+        /* border-left-color: var(--strFuncLightColor);
         border-top-color: var(--strFuncLightColor);
         border-right-color: var(--strFuncShadeColor);
-        border-bottom-color: var(--strFuncShadeColor);
+        border-bottom-color: var(--strFuncShadeColor); */
+        border-color: var(--strFuncShadeColor);
         color: var(--strTextColor);
         background-color: var(--strExBGColor);
 
         border-width: 1pt;
         cursor: pointer;
-        box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+        /* box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor); */
       }
 
       .FuncButton:active {
@@ -192,8 +193,9 @@
       }
 
       .FuncButton:hover {
-        color: var(--strExBGColor);
-        background-color: var(--strTextColor);
+        color: white;
+        background-color: rgb(95, 79, 66);
+        transition: 0.9s;
       }
 
       .crossword-border {
@@ -241,7 +243,7 @@
       table.CrosswordGrid td.LetterOnlyCell {
         text-align: center;
         vertical-align: middle;
-        background-color: #ffffff;
+        background-color: #cabeb5;
         color: #000000;
         font-weight: bold;
       }
@@ -249,7 +251,7 @@
       table.CrosswordGrid td.NumLetterCell {
         text-align: left;
         vertical-align: top;
-        background-color: #ffffff;
+        background-color: #cabeb5;
         color: #000000;
         padding: 1px;
         font-weight: bold;
@@ -340,12 +342,10 @@
         box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
       }
 
-      .FuncButton:active,
       .enterButton:active {
         box-shadow: none;
       }
 
-      .FuncButton:hover,
       .enterButton:hover {
         color: var(--strExBGColor);
         background-color: var(--strTextColor);
@@ -390,7 +390,6 @@
         initAPI(window); // see if this await actually awaits and when does API != null during the program
 
         if (API != null) {
-          //FIGURE OUT HOW TO LMS FINISH TS
           API.LMSInitialize("");
           API.LMSSetValue("cmi.core.lesson_status", "browsed");
           API.LMSSetValue("cmi.core.score.min", 0);
@@ -1324,6 +1323,7 @@
             return;
           }
         }
+
         var TotLetters = 0;
         var CorrectLetters = 0;
         var LetterFromKey = "";
