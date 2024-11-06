@@ -100,10 +100,10 @@
         color: var(--strTitleColor);
       }
 
-      .ExerciseTitle {
+      /* .ExerciseTitle {
         font-size: 140%;
         color: var(--strTitleColor);
-      }
+      } */
 
       .ExerciseSubtitle {
         font-size: 120%;
@@ -206,7 +206,7 @@
         width: fit-content;
         margin-bottom: 10px;
         margin-left: -3px;
-        margin-top: -10px;
+        margin-top: -18px;
       }
 
       table.CrosswordGrid {
@@ -823,7 +823,7 @@
       var InputStuff =
         '<form method="post" id="hint-section" action="" onsubmit="return false;"><span class="ClueNum">[strClueNum]: </span>';
       InputStuff +=
-        '[strClue] <input autocomplete="off" onfocus="CurrentBox=this;InTextBox=true;" onblur="InTextBox=false;" id="[strBoxId]" type="edit" size="[strEditSize]" maxlength="[strMaxLength]"></input>';
+        '[strClue] [[strMaxLength] long] <input autocomplete="off" onfocus="CurrentBox=this;InTextBox=true;" onblur="InTextBox=false;" id="[strBoxId]" type="edit" size="[strEditSize]" maxlength="[strMaxLength]"></input>';
       //TODO find a way to put in the answer word in the input box
       InputStuff +=
         '<button class="enterButton" onclick="EnterGuess([strParams])">Enter</button>';
@@ -878,18 +878,19 @@
       function GetAnswerLength(Across, x, y) {
         Result = 0;
         if (Across == false) {
+          console.log("getting answer length");
           while (x < L.length && L[x][y].length > 0) {
             Result += L[x][y].length;
             x++;
           }
-          return Result;
         } else {
+          console.log("getting answer length, and true");
           while (y < L[x].length && L[x][y].length > 0) {
             Result += L[x][y].length;
             y++;
           }
-          return Result;
         }
+        return Result;
       }
 
       function GetEditSize(Across, x, y) {
@@ -940,7 +941,11 @@
             /\[strBoxId\]/g,
             "GD_" + ClueNum + "_" + x + "_" + y
           );
-          Temp = Temp.replace(/\[strEditSize\]/g, GetAnswerLength(false, x, y));
+          Temp = Temp.replace(/\[strEditSize\]/g, GetEditSize(false, x, y));
+          Temp = Temp.replace(
+            /\[strMaxLength\]/g,
+            GetAnswerLength(false, x, y)
+          );
           Temp = Temp.replace(/\[strClue\]/g, Clue.innerHTML, Temp);
           Result += Temp;
         }
@@ -1393,24 +1398,23 @@
     <!-- EndTopNavButtons -->
 
     <div class="Titles">
-      <h2 class="ExerciseTitle" id="exerciseTitle">APBI 318 Crossword</h2>
+      <h1 class="ExerciseTitle" id="exerciseTitle">APBI 318 Crossword</h1>
 
       <h3 class="ExerciseSubtitle">Bonus Crossword</h3>
     </div>
 
     <div id="InstructionsDiv" class="StdDiv">
       <div id="instructions">
-        You have the opportunity to earn bonus points toward the final grade. If
-        you choose to try, complete the following crossword puzzle. Each clue is
-        worth 1/104th of 5% final grade. However, if you return a completed
-        correct puzzle, it&#x2019;s worth 5% toward your final course grade!!<br /><br />
-        Click on the numbers, type your answers and press <b>Enter</b> to complete the
-          crossword below, then click <b>Submit</b> to submit.
+        You have the opportunity to earn bonus points toward the final grade. Each clue is
+        worth 1/104th of 5% final grade. If you return a completed
+        correct puzzle, it&#x2019;s worth 5% toward your final course grade.
+        
+        <br /><br />Click on the numbers, type your answers and press <b>Enter</b> to complete the
+          crossword below, press <b>Clear</b> to delete an answer, and  <b>Submit</b> to submit.
           
-          <br /><br /> IMPORTANT: You only get <b>
-            ONE 
-          </b>
-          submission so make sure you are fully done when you submit.
+          <br /><br /><b>You only get ONE submission. Check over your work carefully before submitting!</b>
+          
+          <br /><br /><b>IMPORTANT:</b> The crossword will auto-save to your local browser. Therefore, accessing the crossword puzzle through different devices or browsers will not save your work.
       </div>
     </div>
 
