@@ -43,10 +43,10 @@
 
       /* CSS variables for colours. */
       :root {
-        --strFontFace: "Roboto", sans-serif;
+        --strFontFace: "Open Sans", sans-serif;
         --strFontSize: medium;
         --strTextColor: #000000;
-        --strTitleColor: #000000;
+        --strTitleColor: #ffffff;
 
         --strFuncLightColor: #ffffff;
         --strFuncShadeColor: #7f7f7f;
@@ -59,10 +59,10 @@
         --strNavTextColor: #ffffff;
 
         /* this changes background color */
-        --strPageBGColor: #6b9b69;
+        --strPageBGColor: #002145;
 
         /* inner box color */
-        --strExBGColor: #d3c7bd;
+        --strExBGColor: #6ec4e8;
       }
 
       html {
@@ -107,7 +107,7 @@
 
       .ExerciseSubtitle {
         font-size: 120%;
-        color: var(--strTitleColor);
+        color: #000000;
       }
 
       div.StdDiv,
@@ -179,7 +179,7 @@
         border-top-color: var(--strFuncLightColor);
         border-right-color: var(--strFuncShadeColor);
         border-bottom-color: var(--strFuncShadeColor); */
-        border-color: var(--strFuncShadeColor);
+        border-color: black;
         color: var(--strTextColor);
         background-color: var(--strExBGColor);
 
@@ -193,7 +193,7 @@
 
       .FuncButton:hover {
         color: white;
-        background-color: rgb(95, 79, 66);
+        background-color: var(--strPageBGColor);
         transition: 0.9s;
       }
 
@@ -201,9 +201,9 @@
         width: 150px;
         text-transform: uppercase;
         font-size: 16px;
-        border-color: black;
-        color: var(--strTextColor);
-        background-color: #c7baaf;
+        border: solid 1px black;
+        color: black;
+        background-color: white;
       }
 
       .input-box:focus {
@@ -217,7 +217,7 @@
       .crossword-border {
         justify-content: center;
         /* this will change border around crossword color */
-        border: 5px solid #836953;
+        border: 5px solid var(--strPageBGColor);
         border-radius: 10px;
         width: fit-content;
         margin-bottom: 10px;
@@ -241,7 +241,7 @@
         margin: 0px;
         border-style: solid;
         border-width: 1px;
-        border-color: #836953;
+        border-color: var(--strPageBGColor);
         color: #0000ff;
       }
 
@@ -252,14 +252,14 @@
       table.CrosswordGrid td.BlankCell {
         padding-left: 10px;
         /* this will change blankcell background */
-        background-color: #836953;
+        background-color: var(--strPageBGColor);
         color: #000000;
       }
 
       table.CrosswordGrid td.LetterOnlyCell {
         text-align: center;
         vertical-align: middle;
-        background-color: #cabeb5;
+        background-color: #ffffff;
         color: #000000;
         font-weight: bold;
       }
@@ -267,7 +267,7 @@
       table.CrosswordGrid td.NumLetterCell {
         text-align: left;
         vertical-align: top;
-        background-color: #cabeb5;
+        background-color: #ffffff;
         color: #000000;
         padding: 1px;
         font-weight: bold;
@@ -327,7 +327,7 @@
 
         border-color: black;
         color: var(--strTextColor);
-        background-color: #c7baaf;
+        background-color: #ffffff;
 
         border-width: 1pt;
         cursor: pointer;
@@ -340,8 +340,8 @@
       }
 
       .enterButton:hover {
-        color: var(--strExBGColor);
-        background-color: var(--strTextColor);
+        color: #ffffff;
+        background-color: var(--strPageBGColor);
         transition: 0.5s;
       }
     </style>
@@ -397,6 +397,7 @@
 
             startMessage +=
               "IMPORTANT: You have ONE submission for this assignment! So completely finish before submitting!" +
+              "<br />" +
               "<br />";
             startMessage +=
               "IMPORTANT: The crossword data will save to your local browser, meaning that accessing a seperate browser or deleting your cache will remove the crossword data inputted." +
@@ -1385,7 +1386,7 @@
     <div class="Titles">
       <h1 class="ExerciseTitle" id="exerciseTitle">APBI 318 Crossword</h1>
 
-      <h3 class="ExerciseSubtitle">Bonus Crossword</h3>
+      <h3 class="title-subtitle">Bonus Crossword</h3>
     </div>
 
     <div id="InstructionsDiv" class="StdDiv">
