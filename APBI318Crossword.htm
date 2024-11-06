@@ -185,7 +185,6 @@
 
         border-width: 1pt;
         cursor: pointer;
-        /* box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor); */
       }
 
       .FuncButton:active {
@@ -198,6 +197,23 @@
         transition: 0.9s;
       }
 
+      .input-box {
+        width: 150px;
+        text-transform: uppercase;
+        font-size: 16px;
+        border-color: black;
+        color: var(--strTextColor);
+        background-color: #c7baaf;
+      }
+
+      .input-box:focus {
+        outline: black;
+      }
+
+      .StdDiv {
+        margin-bottom: 2px !important;
+      }
+
       .crossword-border {
         justify-content: center;
         /* this will change border around crossword color */
@@ -206,7 +222,7 @@
         width: fit-content;
         margin-bottom: 10px;
         margin-left: -3px;
-        margin-top: -18px;
+        margin-top: -10px;
       }
 
       table.CrosswordGrid {
@@ -303,43 +319,20 @@
         margin-bottom: 1em;
       }
 
-      /* Keypad styles */
-
-      div.Keypad {
-        text-align: center;
-        display: none; /* initially hidden, shown if needed */
-        margin-bottom: 0.5em;
-      }
-
-      div.Keypad button {
-        font-family: var(--strFontFace);
-        font-size: 120%;
-        background-color: #ffffff;
-        color: #000000;
-        width: 2em;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 0.5em;
-        color: var(--strTextColor);
-        box-shadow: 0.2em 0.3em 0.2em var(--strTextColor);
-      }
-
       .enterButton {
         border-style: solid;
         border-radius: 0.5em;
         padding: 0.5em;
         min-width: 3em;
 
-        border-left-color: var(--strFuncLightColor);
-        border-top-color: var(--strFuncLightColor);
-        border-right-color: var(--strFuncShadeColor);
-        border-bottom-color: var(--strFuncShadeColor);
+        border-color: black;
         color: var(--strTextColor);
-        background-color: var(--strExBGColor);
+        background-color: #c7baaf;
 
         border-width: 1pt;
         cursor: pointer;
-        box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor);
+        margin-left: 5px;
+        /* box-shadow: 0.2em 0.3em 0.2em var(--strFuncShadeColor); */
       }
 
       .enterButton:active {
@@ -823,7 +816,7 @@
       var InputStuff =
         '<form method="post" id="hint-section" action="" onsubmit="return false;"><span class="ClueNum">[strClueNum]: </span>';
       InputStuff +=
-        '[strClue] [[strMaxLength] long] <input autocomplete="off" onfocus="CurrentBox=this;InTextBox=true;" onblur="InTextBox=false;" id="[strBoxId]" type="edit" size="[strEditSize]" maxlength="[strMaxLength]"></input>';
+        '[strClue] [[strMaxLength] long] <input autocomplete="off" class="input-box" onfocus="CurrentBox=this;InTextBox=true;" onblur="InTextBox=false;" id="[strBoxId]" type="edit" size="[strEditSize]" maxlength="[strMaxLength]"></input>';
       //TODO find a way to put in the answer word in the input box
       InputStuff +=
         '<button class="enterButton" onclick="EnterGuess([strParams])">Enter</button>';
@@ -865,10 +858,6 @@
           }
         }
 
-        if (document.getElementById("CharacterKeypad") != null) {
-          document.getElementById("CharacterKeypad").style.display = "block";
-        }
-
         ScormStartUp();
 
         AcrossCaption = document.getElementById("CluesAcrossLabel").innerHTML;
@@ -878,13 +867,11 @@
       function GetAnswerLength(Across, x, y) {
         Result = 0;
         if (Across == false) {
-          console.log("getting answer length");
           while (x < L.length && L[x][y].length > 0) {
             Result += L[x][y].length;
             x++;
           }
         } else {
-          console.log("getting answer length, and true");
           while (y < L[x].length && L[x][y].length > 0) {
             Result += L[x][y].length;
             y++;
@@ -1360,8 +1347,6 @@
         }
 
         Score = Math.ceil((CorrectLetters * 100) / TotLetters);
-        console.log(Score);
-        console.log(TotLetters);
         if (Score < 0) {
           Score = 0;
         }
