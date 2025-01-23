@@ -217,7 +217,7 @@
       .crossword-border {
         justify-content: center;
         /* this will change border around crossword color */
-        border: 5px solid var(--strPageBGColor);
+        border: 6px solid var(--strPageBGColor);
         border-radius: 10px;
         width: fit-content;
         margin-bottom: 10px;
@@ -1078,6 +1078,122 @@
         }
       }
 
+      // bound each word by '', and get each word that breaks at a ''
+      // create valid word list, and check how many words match, use hashmap to have constant lookup
+
+      function solveCrossword() {
+        totalWordsFound = [];
+
+        //Create global valid words
+        function solveLine(line, word) {
+          joined_line = line.join("");
+          if (joined_line.contains(word)) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        //find column
+        function getColumn(grid, column_index) {
+          current_column = [];
+
+          for (i = 0; i < grid.length; i++) {
+            current_column = grid[i][current_column];
+          }
+
+          return current_column;
+        }
+      }
+      /*
+      def solve_crossword(grid, words):
+    def find_word_in_line(line, word):
+        """Helper to find if a word exists in a row or column."""
+        joined_line = ''.join([char if char else ' ' for char in line])  # Replace '' with spaces
+        index = joined_line.find(word)  # Check if the word exists
+        return index if index != -1 else None
+
+    def get_column(grid, col_index):
+        """Helper to extract a column from the grid."""
+        return [grid[row][col_index] for row in range(len(grid))]
+
+    found_words = []
+
+    # Check horizontally
+    for row_index, row in enumerate(grid):
+        for word in words:
+            start_index = find_word_in_line(row, word)
+            if start_index is not None:
+                found_words.append({
+                    "word": word,
+                    "start": (row_index, start_index),
+                    "direction": "horizontal"
+                })
+
+    # Check vertically
+    num_columns = len(grid[0])
+    for col_index in range(num_columns):
+        column = get_column(grid, col_index)
+        for word in words:
+            start_index = find_word_in_line(column, word)
+            if start_index is not None:
+                found_words.append({
+                    "word": word,
+                    "start": (start_index, col_index),
+                    "direction": "vertical"
+                })
+
+    return found_words
+
+
+# Example grid and words
+L = [
+    ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'P', '', '', '', '', '', '', ''],
+    ['D', 'I', 'S', 'O', 'M', 'I', 'C', '', 'F', 'O', 'N', 'E', 'H', 'Y', 'B', 'R', 'I', 'D', '', '', 'L', 'O', 'C', 'U', 'L', 'E', ''],
+    ['', '', 'E', '', '', '', 'H', '', '', 'V', '', '', '', '', 'E', '', '', '', '', 'E', '', '', '', '', '', '', ''],
+    ['', '', 'E', '', 'E', 'P', 'I', 'S', 'T', 'A', 'S', 'I', 'S', '', 'E', '', '', 'V', 'A', 'R', 'I', 'A', 'N', 'C', 'E', '', ''],
+    # Add the remaining rows from your array
+]
+
+words_to_find = ["FERTILIZATION", "GENE", "HETEROSIS"]
+
+# Solve the crossword
+found = solve_crossword(L, words_to_find)
+
+# Print results
+for word_info in found:
+    print(f"Word '{word_info['word']}' found at {word_info['start']} going {word_info['direction']}.")
+
+
+
+         for (var i = 0; i < L.length; i++) {
+          for (var j = 0; j < L[i].length; j++) {
+            if (L[i][j] != "") {
+              TotLetters++;
+              if (CaseSensitive == true) {
+                LetterFromKey = L[i][j];
+                LetterFromGuess = G[i][j];
+              } else {
+                LetterFromKey = L[i][j].toUpperCase();
+                LetterFromGuess = G[i][j].toUpperCase();
+              }
+              if (LetterFromGuess != LetterFromKey) {
+                // G[i][j] = "";
+                //Blank that square in the grid
+                // SetGridSquareValue(i, j, "");
+                //if you uncomment it will get rid of wrong answers
+                AllCorrect = false;
+              } else {
+                while
+                CorrectLetters++;
+              }
+            }
+          }
+        }
+      
+      
+    
+      */
       // prettier-ignore
       L = new Array();
       // prettier-ignore
