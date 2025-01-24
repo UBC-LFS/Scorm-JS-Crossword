@@ -1081,7 +1081,7 @@
       // bound each word by '', and get each word that breaks at a ''
       // create valid word list, and check how many words match, use hashmap to have constant lookup
 
-      function solveCrossword() {
+      function solveCrossword(grid, guessGrid, words) {
         totalWordsFound = [];
 
         //Create global valid words
@@ -1104,6 +1104,12 @@
 
           return current_column;
         }
+
+        grid.forEach((row) => {
+          words.forEach((word) => {
+            solveLine(row, word);
+          });
+        });
       }
       /*
       def solve_crossword(grid, words):
@@ -1434,36 +1440,91 @@ for word_info in found:
         }
 
         var TotLetters = 0;
-        var CorrectLetters = 0;
+        var correctWords = 0;
         var LetterFromKey = "";
         var LetterFromGuess = "";
 
-        //Check each letter
-        for (var i = 0; i < L.length; i++) {
-          for (var j = 0; j < L[i].length; j++) {
-            if (L[i][j] != "") {
-              TotLetters++;
-              if (CaseSensitive == true) {
-                LetterFromKey = L[i][j];
-                LetterFromGuess = G[i][j];
-              } else {
-                LetterFromKey = L[i][j].toUpperCase();
-                LetterFromGuess = G[i][j].toUpperCase();
-              }
-              if (LetterFromGuess != LetterFromKey) {
-                // G[i][j] = "";
-                //Blank that square in the grid
-                // SetGridSquareValue(i, j, "");
-                //if you uncomment it will get rid of wrong answers
-                AllCorrect = false;
-              } else {
-                CorrectLetters++;
-              }
+        function rowToList(row) {
+          let tempList = row
+            .join(" ")
+            .split("  ")
+            .filter((char) => char !== " ");
+
+          let res = [];
+
+          tempList.forEach((word) => {
+            let newWord = word.replaceAll(" ", "");
+            res.push(newWord);
+          });
+
+          return res;
+        }
+
+        function colToList(grid, column_index) {
+          let current_column = [];
+
+          for (let i = 0; i < grid.length; i++) {
+            current_column.push(grid[i][column_index]);
+          }
+
+          current_column = rowToList(current_column).filter(
+            (char) => char !== ""
+          );
+
+          return current_column;
+        }
+
+        //Check each word
+        for (var row = 0; row < L.length; row++) {
+          for (var column = 0; column < L[row].length; column++) {
+            //make key row into a list ["BEE", "MITOCHRONDRIA"]
+            //make guess row into a list
+
+            //iterate through guess row, if guess[row] == key[row] then its correct!
+            let keyRow = rowToList(L[row]);
+            let guessRow = rowToList(G[row]);
+
+            keyRow.forEach((word) => {
+              guessRow.forEach((guessedWord) => {
+                if (word === guessedWord) {
+                  correctWords++;
+                }
+              });
+            });
+
+            let keyCol = colToList(L, column);
+            let guessCol = colToList(G, column);
+
+            keyCol.forEach((word) => {
+              guessCol.forEach((guessedWord) => {
+                if (word === guessedWord) {
+                  correctWords++;
+                }
+              });
+            });
+
+            //BEE''MITROCHRONDRIA''PILLOW
+            TotLetters++;
+            if (CaseSensitive == true) {
+              LetterFromKey = L[row][column];
+              LetterFromGuess = G[row][column];
+            } else {
+              LetterFromKey = L[row][column].toUpperCase();
+              LetterFromGuess = G[row][column].toUpperCase();
+            }
+            if (LetterFromGuess != LetterFromKey) {
+              // G[i][j] = "";
+              //Blank that square in the grid
+              // SetGridSquareValue(i, j, "");
+              //if you uncomment it will get rid of wrong answers
+              AllCorrect = false;
+            } else {
+              correctWords++;
             }
           }
         }
 
-        Score = Math.ceil((CorrectLetters * 100) / TotLetters);
+        Score = Math.ceil((correctWords * 100) / TotLetters);
         if (Score < 0) {
           Score = 0;
         }
