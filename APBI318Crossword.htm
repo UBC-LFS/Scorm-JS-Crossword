@@ -1112,94 +1112,202 @@
         });
       }
       /*
-      def solve_crossword(grid, words):
-    def find_word_in_line(line, word):
-        """Helper to find if a word exists in a row or column."""
-        joined_line = ''.join([char if char else ' ' for char in line])  # Replace '' with spaces
-        index = joined_line.find(word)  # Check if the word exists
-        return index if index != -1 else None
+            def solve_crossword(grid, words):
+          def find_word_in_line(line, word):
+              """Helper to find if a word exists in a row or column."""
+              joined_line = ''.join([char if char else ' ' for char in line])  # Replace '' with spaces
+              index = joined_line.find(word)  # Check if the word exists
+              return index if index != -1 else None
 
-    def get_column(grid, col_index):
-        """Helper to extract a column from the grid."""
-        return [grid[row][col_index] for row in range(len(grid))]
+          def get_column(grid, col_index):
+              """Helper to extract a column from the grid."""
+              return [grid[row][col_index] for row in range(len(grid))]
 
-    found_words = []
+          found_words = []
 
-    # Check horizontally
-    for row_index, row in enumerate(grid):
-        for word in words:
-            start_index = find_word_in_line(row, word)
-            if start_index is not None:
-                found_words.append({
-                    "word": word,
-                    "start": (row_index, start_index),
-                    "direction": "horizontal"
-                })
+          # Check horizontally
+          for row_index, row in enumerate(grid):
+              for word in words:
+                  start_index = find_word_in_line(row, word)
+                  if start_index is not None:
+                      found_words.append({
+                          "word": word,
+                          "start": (row_index, start_index),
+                          "direction": "horizontal"
+                      })
 
-    # Check vertically
-    num_columns = len(grid[0])
-    for col_index in range(num_columns):
-        column = get_column(grid, col_index)
-        for word in words:
-            start_index = find_word_in_line(column, word)
-            if start_index is not None:
-                found_words.append({
-                    "word": word,
-                    "start": (start_index, col_index),
-                    "direction": "vertical"
-                })
+          # Check vertically
+          num_columns = len(grid[0])
+          for col_index in range(num_columns):
+              column = get_column(grid, col_index)
+              for word in words:
+                  start_index = find_word_in_line(column, word)
+                  if start_index is not None:
+                      found_words.append({
+                          "word": word,
+                          "start": (start_index, col_index),
+                          "direction": "vertical"
+                      })
 
-    return found_words
-
-
-# Example grid and words
-L = [
-    ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'P', '', '', '', '', '', '', ''],
-    ['D', 'I', 'S', 'O', 'M', 'I', 'C', '', 'F', 'O', 'N', 'E', 'H', 'Y', 'B', 'R', 'I', 'D', '', '', 'L', 'O', 'C', 'U', 'L', 'E', ''],
-    ['', '', 'E', '', '', '', 'H', '', '', 'V', '', '', '', '', 'E', '', '', '', '', 'E', '', '', '', '', '', '', ''],
-    ['', '', 'E', '', 'E', 'P', 'I', 'S', 'T', 'A', 'S', 'I', 'S', '', 'E', '', '', 'V', 'A', 'R', 'I', 'A', 'N', 'C', 'E', '', ''],
-    # Add the remaining rows from your array
-]
-
-words_to_find = ["FERTILIZATION", "GENE", "HETEROSIS"]
-
-# Solve the crossword
-found = solve_crossword(L, words_to_find)
-
-# Print results
-for word_info in found:
-    print(f"Word '{word_info['word']}' found at {word_info['start']} going {word_info['direction']}.")
+          return found_words
 
 
+      # Example grid and words
+      L = [
+          ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'P', '', '', '', '', '', '', ''],
+          ['D', 'I', 'S', 'O', 'M', 'I', 'C', '', 'F', 'O', 'N', 'E', 'H', 'Y', 'B', 'R', 'I', 'D', '', '', 'L', 'O', 'C', 'U', 'L', 'E', ''],
+          ['', '', 'E', '', '', '', 'H', '', '', 'V', '', '', '', '', 'E', '', '', '', '', 'E', '', '', '', '', '', '', ''],
+          ['', '', 'E', '', 'E', 'P', 'I', 'S', 'T', 'A', 'S', 'I', 'S', '', 'E', '', '', 'V', 'A', 'R', 'I', 'A', 'N', 'C', 'E', '', ''],
+          # Add the remaining rows from your array
+      ]
 
-         for (var i = 0; i < L.length; i++) {
-          for (var j = 0; j < L[i].length; j++) {
-            if (L[i][j] != "") {
-              TotLetters++;
-              if (CaseSensitive == true) {
-                LetterFromKey = L[i][j];
-                LetterFromGuess = G[i][j];
-              } else {
-                LetterFromKey = L[i][j].toUpperCase();
-                LetterFromGuess = G[i][j].toUpperCase();
+      words_to_find = ["FERTILIZATION", "GENE", "HETEROSIS"]
+
+      # Solve the crossword
+      found = solve_crossword(L, words_to_find)
+
+      # Print results
+      for word_info in found:
+          print(f"Word '{word_info['word']}' found at {word_info['start']} going {word_info['direction']}.")
+
+
+
+               for (var i = 0; i < L.length; i++) {
+                for (var j = 0; j < L[i].length; j++) {
+                  if (L[i][j] != "") {
+                    TotLetters++;
+                    if (CaseSensitive == true) {
+                      LetterFromKey = L[i][j];
+                      LetterFromGuess = G[i][j];
+                    } else {
+                      LetterFromKey = L[i][j].toUpperCase();
+                      LetterFromGuess = G[i][j].toUpperCase();
+                    }
+                    if (LetterFromGuess != LetterFromKey) {
+                      // G[i][j] = "";
+                      //Blank that square in the grid
+                      // SetGridSquareValue(i, j, "");
+                      //if you uncomment it will get rid of wrong answers
+                      AllCorrect = false;
+                    } else {
+                      while
+                      CorrectLetters++;
+                    }
+                  }
+                }
               }
-              if (LetterFromGuess != LetterFromKey) {
-                // G[i][j] = "";
-                //Blank that square in the grid
-                // SetGridSquareValue(i, j, "");
-                //if you uncomment it will get rid of wrong answers
-                AllCorrect = false;
-              } else {
-                while
-                CorrectLetters++;
-              }
-            }
-          }
-        }
-      
-      
-    
-      */
+
+
+
+            */
+      const terms = new Set([
+        "disomic",
+        "fonehybrid",
+        "locule",
+        "epistasis",
+        "variance",
+        "sport",
+        "anneals",
+        "ATP",
+        "one",
+        "penetrance",
+        "chromosome",
+        "map",
+        "ray",
+        "sib",
+        "tag",
+        "peg",
+        "meiosis",
+        "sire",
+        "carmine",
+        "tetrazolium",
+        "amylo",
+        "ni",
+        "exine",
+        "cis",
+        "MRNA",
+        "chiasma",
+        "salt",
+        "sex",
+        "xray",
+        "plasmid",
+        "diploid",
+        "crisp",
+        "alleles",
+        "testcross",
+        "testa",
+        "anthesis",
+        "pachy",
+        "cell",
+        "GA",
+        "fertilization",
+        "tube",
+        "lii",
+        "Terminalization",
+        "maple",
+        "errors",
+        "select",
+        "rogue",
+        "gene",
+        "castle",
+        "incompatible",
+        "heterosis",
+        "style",
+        "anther",
+        "op",
+        "pleiotropic",
+        "seed",
+        "chi",
+        "ovary",
+        "bee",
+        "expressivity",
+        "syngamy",
+        "vesicle",
+        "crossover",
+        "sperm",
+        "antigen",
+        "heterozygote",
+        "parthenocarpic",
+        "chimera",
+        "polar",
+        "codon",
+        "pistil",
+        "gel",
+        "mitochondrion",
+        "cybrid",
+        "linked",
+        "metaxenia",
+        "aminoacid",
+        "mutate",
+        "anaphase",
+        "synthetic",
+        "pollen",
+        "tassel",
+        "spindle",
+        "etoh",
+        "tapetum",
+        "egg",
+        "sem",
+        "cultivar",
+        "CDNA",
+        "GMU",
+        "pedigrees",
+        "gametes",
+        "pin",
+        "trial",
+        "BC",
+        "sort",
+        "clone",
+        "intine",
+        "apomict",
+        "zygote",
+        "mode",
+        "pseudo",
+        "agent",
+        "repel",
+        "nine",
+        "errors",
+      ]);
       // prettier-ignore
       L = new Array();
       // prettier-ignore
@@ -1439,16 +1547,24 @@ for word_info in found:
           }
         }
 
-        var TotLetters = 0;
-        var correctWords = 0;
-        var LetterFromKey = "";
-        var LetterFromGuess = "";
+        let correctWords = 0;
+        let seen = new Set([]);
+        let parsedList = new Set([]);
 
+        terms.forEach((word) => {
+          parsedList.add(word.toLowerCase());
+        });
+
+        /**
+         *
+         * @param {Int} row
+         * @returns {Array} row of appended words
+         */
         function rowToList(row) {
           let tempList = row
             .join(" ")
             .split("  ")
-            .filter((char) => char !== " ");
+            .filter((char) => char !== "");
 
           let res = [];
 
@@ -1457,9 +1573,17 @@ for word_info in found:
             res.push(newWord);
           });
 
+          tempList.forEach((word) => {});
+
           return res;
         }
 
+        /**
+         *
+         * @param {Array}   grid
+         * @param {Int}     column_index
+         * @returns {Array} List
+         */
         function colToList(grid, column_index) {
           let current_column = [];
 
@@ -1474,60 +1598,75 @@ for word_info in found:
           return current_column;
         }
 
-        //Check each word
+        /**
+         *
+         * @param {String}   key
+         * @param {String}   guess
+         */
+        function checkValidity(key, guess) {
+          if (
+            key.toLowerCase() === guess.toLowerCase() &&
+            parsedList.has(key.toLowerCase()) &&
+            parsedList.has(guess.toLowerCase()) &&
+            !seen.has(key)
+          ) {
+            correctWords++;
+            seen.add(key);
+          }
+        }
+
+        /**
+         * @purpose Find the matches in the rows
+         */
+        for (var row = 0; row < L.length; row++) {
+          //make key row into a list ["BEE", "MITOCHRONDRIA"]
+          //make guess row into a list
+          //iterate through guess row, if guess[row] == key[row] then its correct!
+          let keyRow = rowToList(L[row]);
+          console.log(keyRow);
+          let guessRow = rowToList(G[row]);
+          console.log(guessRow);
+
+          keyRow.forEach((key) => {
+            guessRow.forEach((guessed) => {
+              checkValidity(key, guessed);
+            });
+          });
+        }
+
+        /**
+         * @purpose Find the matches in the columns
+         */
+
         for (var row = 0; row < L.length; row++) {
           for (var column = 0; column < L[row].length; column++) {
             //make key row into a list ["BEE", "MITOCHRONDRIA"]
             //make guess row into a list
-
             //iterate through guess row, if guess[row] == key[row] then its correct!
-            let keyRow = rowToList(L[row]);
-            let guessRow = rowToList(G[row]);
-
-            keyRow.forEach((word) => {
-              guessRow.forEach((guessedWord) => {
-                if (word === guessedWord) {
-                  correctWords++;
-                }
-              });
-            });
-
             let keyCol = colToList(L, column);
-            let guessCol = colToList(G, column);
+            let guessedCol = colToList(G, column);
 
-            keyCol.forEach((word) => {
-              guessCol.forEach((guessedWord) => {
-                if (word === guessedWord) {
-                  correctWords++;
-                }
+            keyCol.forEach((key) => {
+              guessedCol.forEach((guessed) => {
+                checkValidity(key, guessed);
               });
             });
-
-            //BEE''MITROCHRONDRIA''PILLOW
-            TotLetters++;
-            if (CaseSensitive == true) {
-              LetterFromKey = L[row][column];
-              LetterFromGuess = G[row][column];
-            } else {
-              LetterFromKey = L[row][column].toUpperCase();
-              LetterFromGuess = G[row][column].toUpperCase();
-            }
-            if (LetterFromGuess != LetterFromKey) {
-              // G[i][j] = "";
-              //Blank that square in the grid
-              // SetGridSquareValue(i, j, "");
-              //if you uncomment it will get rid of wrong answers
-              AllCorrect = false;
-            } else {
-              correctWords++;
-            }
           }
         }
 
-        Score = Math.ceil((correctWords * 100) / TotLetters);
-        if (Score < 0) {
+        Score = (correctWords / terms.size) * 100; // TODO AAAAHHH
+        console.log(Score);
+        console.log(correctWords);
+        console.log(terms.size);
+        if (0 < Score && Score <= 1) {
+          Score = 1;
+        } else if (Score <= 0) {
           Score = 0;
+        } else {
+          Score = Math.floor(Score / 1);
         }
+
+        console.log(Score);
 
         //Compile the output
         var Output = "";
@@ -1569,7 +1708,7 @@ for word_info in found:
     <div id="InstructionsDiv" class="StdDiv">
       <div id="instructions">
         You have the opportunity to earn bonus points toward the final grade. Each clue is
-        worth 1/104th of 5% final grade. If you return a completed
+        worth 1/105th of 5% final grade. If you return a completed
         correct puzzle, it&#x2019;s worth 5% toward your final course grade.
         
         <br /><br />Click on the numbers, type your answers and press <b>Enter</b> to complete the
